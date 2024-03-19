@@ -777,7 +777,7 @@ PrefabInstance:
     - target: {fileID: 13700000, guid: d3aa50a8114db7a4e95c5cb29a283ac4, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: 421c2e069b0314946bdd25a082e772f4,
+      objectReference: {fileID: -5495902117074765545, guid: 4118e80b48f953046a77b441da31c3e8,
         type: 3}
     - target: {fileID: 13700000, guid: d3aa50a8114db7a4e95c5cb29a283ac4, type: 3}
       propertyPath: m_RootBone
@@ -1203,7 +1203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: ff65d00f-ea7e-47fa-9f99-34acb2c8fc40
+  m_Id: 2e733b0e-4658-46f7-a624-d2d57aa9c7e5
 --- !u!4 &2686829313085064380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,
