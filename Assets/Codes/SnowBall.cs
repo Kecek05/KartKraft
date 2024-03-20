@@ -7,7 +7,7 @@ public class SnowBall : MonoBehaviour, ITouchable
     [SerializeField] private float speed;
 
     [SerializeField] private Rigidbody rb;
-
+    [SerializeField] float dieTime;
     public void touch(int type)
     {
        
@@ -16,7 +16,7 @@ public class SnowBall : MonoBehaviour, ITouchable
     void Start()
     {
         rb.velocity = transform.forward * speed;
-        Destroy(this.gameObject, 5f);
+        Destroy(this.gameObject, dieTime);
     }
 
     void Update()

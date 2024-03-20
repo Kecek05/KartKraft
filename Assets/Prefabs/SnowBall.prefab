@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   rb: {fileID: 371188726130928351}
+  dieTime: 3

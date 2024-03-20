@@ -6,16 +6,14 @@ using UnityEngine;
 public class PlayerThrow : MonoBehaviour, ITouchable
 {
     [SerializeField] private Transform PointFront;
+    [SerializeField] private Rigidbody rb;
     public GameObject Item;
-    [SerializeField] private ArcadeKart KartScript;
-    private float PreviousTopSpeed;
     [SerializeField] private float StunTime;
 
     public void touch(int type)
     {
        if(type == 0)
         {
-            PreviousTopSpeed = KartScript.baseStats.TopSpeed;
             StartCoroutine(StunTaken());
         }
     }
@@ -40,9 +38,9 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     private IEnumerator StunTaken()
     {
-        KartScript.baseStats.TopSpeed = 0;
+        rb.constraints = RigidbodyConstraints.FreezePosition;
         yield return new WaitForSeconds(StunTime);
-        KartScript.baseStats.TopSpeed = PreviousTopSpeed;
+        rb.constraints = RigidbodyConstraints.None;
     }
     
 }
