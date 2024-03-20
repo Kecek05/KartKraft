@@ -18,13 +18,15 @@ public class KartSelector : MonoBehaviour
         currentCar = cartList[selectedCar];
         carousel.transform.position = Vector3.Lerp(carousel.transform.position,new Vector3(selectedCar * -7,0,0), Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             RightKartSelector();
-        } else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        } else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             LeftKartSelector();
         }
+        if(Input.GetKeyDown(KeyCode.Space)) 
+            SelectCar();
     }
 
     public void RightKartSelector()

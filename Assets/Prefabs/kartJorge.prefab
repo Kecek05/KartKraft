@@ -580,7 +580,7 @@ PrefabInstance:
     - target: {fileID: 2300006, guid: 305a556307b36464395aa157cffcd3db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 637949407474519127, guid: b7adec9218e08aa448cbb7d30446b004,
+      objectReference: {fileID: -5605289326131794027, guid: d72f3d6c1236f654fb6baa39aaa5d93d,
         type: 3}
     - target: {fileID: 3300000, guid: 305a556307b36464395aa157cffcd3db, type: 3}
       propertyPath: m_Mesh
@@ -1187,7 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: 50c7295e-692a-4314-9c89-2d7f760afb87
+  m_Id: e06d8a4e-e0c0-4bde-93af-018d79fa23e8
 --- !u!1001 &6326865117994563255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1380,7 +1380,7 @@ PrefabInstance:
     - target: {fileID: 13700000, guid: d3aa50a8114db7a4e95c5cb29a283ac4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 99656467281103303, guid: 717b49876e945ce468373f08c0083101,
+      objectReference: {fileID: 637949407474519127, guid: b7adec9218e08aa448cbb7d30446b004,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
