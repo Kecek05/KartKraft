@@ -1282,8 +1282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointFront: {fileID: 8168399067418378648}
   rb: {fileID: 2686829313085064381}
-  Item: {fileID: 812026231980881986, guid: 9e6e0f3a089d286469f35daedef9a6ad, type: 3}
-  StunTime: 2
+  Item: {fileID: 0}
 --- !u!4 &2686829313085064380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,

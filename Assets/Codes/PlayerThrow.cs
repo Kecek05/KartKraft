@@ -8,14 +8,17 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     [SerializeField] private Transform PointFront;
     [SerializeField] private Rigidbody rb;
     public GameObject Item;
-    [SerializeField] private float StunTime;
+   
 
     public void touch(int type)
     {
-       if(type == 0)
-        {
-            StartCoroutine(StunTaken());
-        }
+       if (type == 0) // luckybox
+       {
+            Item = SkillsManager.main.getPowerUp();
+       }else if(type == 1) //SnowBall
+       { 
+            StartCoroutine(StunTaken()); 
+       }
     }
 
     void Start()
@@ -30,7 +33,11 @@ public class PlayerThrow : MonoBehaviour, ITouchable
         {
             if (PointFront != null)
             {
-                Instantiate(Item, PointFront.position, PointFront.rotation);
+                if(Item != null)
+                {
+                    Instantiate(Item, PointFront.position, PointFront.rotation);
+                    Item = null;
+                }
             }
 
         }
@@ -39,8 +46,8 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     private IEnumerator StunTaken()
     {
         rb.constraints = RigidbodyConstraints.FreezePosition;
-        yield return new WaitForSeconds(StunTime);
+        yield return new WaitForSeconds(SkillsManager.main.StunTime);
         rb.constraints = RigidbodyConstraints.None;
     }
-    
+
 }
