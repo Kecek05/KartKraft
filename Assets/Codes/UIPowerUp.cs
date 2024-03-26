@@ -31,6 +31,9 @@ public class UIPowerUp : MonoBehaviour
         else if(item.gameObject.tag == "PocaoSpeed")
         {
             imagemUI.sprite = itensSprite[1];
+        } else if (item.gameObject.tag == "MiniZombie")
+        {
+            imagemUI.sprite = itensSprite[2];
         }
 
 

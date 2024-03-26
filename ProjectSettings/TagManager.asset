@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PocaoSpeed
   - SnowBall
+  - MiniZombie
   layers:
   - Default
   - TransparentFX
