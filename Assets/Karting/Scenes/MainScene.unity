@@ -46658,6 +46658,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoatKart
       objectReference: {fileID: 0}
+    - target: {fileID: 2686829313085064379, guid: 98369923c8ecfb14cbf20602c4c276e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2686829313085064380, guid: 98369923c8ecfb14cbf20602c4c276e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47365,7 +47370,6 @@ GameObject:
   - component: {fileID: 1839270243}
   - component: {fileID: 1839270242}
   - component: {fileID: 1839270244}
-  - component: {fileID: 1839270245}
   m_Layer: 5
   m_Name: ItemBox
   m_TagString: Untagged
@@ -47448,18 +47452,6 @@ MonoBehaviour:
   - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
   - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
   imagemUI: {fileID: 1804386678}
---- !u!114 &1839270245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839270240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c47b124bfce88b4e90634a7e97bd1c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1840120609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49548,6 +49540,7 @@ MonoBehaviour:
   powerUpsArray:
   - {fileID: 812026231980881986, guid: 9e6e0f3a089d286469f35daedef9a6ad, type: 3}
   - {fileID: 2122216250970363506, guid: 5cda3b08076327d42b6d2bf359ec56d7, type: 3}
+  - {fileID: 5642706998208230477, guid: 053d8df06e0f9064ca93451e922e0939, type: 3}
   stunTime: 3
   MiniZombiestunTime: 5
   potionSpeedDuration: 3

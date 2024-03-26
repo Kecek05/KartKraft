@@ -22,22 +22,6 @@ public class SkillsManager : MonoBehaviour
         main = this;
     }
 
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
-    //public void hitSkill(GameObject Player)
-    //{
-    //    print("nome player " + Player.name);
-    //}
-
-
 
     public GameObject getPowerUp()
     {

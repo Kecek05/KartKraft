@@ -11,8 +11,6 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     [SerializeField] private GameObject particleSpeed;
 
     public GameObject Item;
-
-
    
 
     public void touch(int type) // coisas que tocao
@@ -36,7 +34,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     void Start()
     {
-        
+
     }
 
 

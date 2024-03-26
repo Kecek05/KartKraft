@@ -16,7 +16,7 @@ public class LuckyBox : MonoBehaviour
         {
             // Obtém o objeto pai do objeto que acionou o gatilho
             GameObject parentObject = other.transform.parent.gameObject;
-            print(parentObject.name);
+            //print(parentObject.name);
             ITouchable touchable = parentObject.GetComponent<ITouchable>();
             if (touchable != null)
             {

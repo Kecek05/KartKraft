@@ -5973,6 +5973,16 @@ PrefabInstance:
       objectReference: {fileID: 8811069872648818171}
     - target: {fileID: 4895846115356922113, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
+      propertyPath: m_Name
+      value: BoatBouncingCapsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115356922113, guid: cba6236a3ca88a54081cc989c4f0c08a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115356922113, guid: cba6236a3ca88a54081cc989c4f0c08a,
+        type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -6101,7 +6111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: c945c970-a2ea-4ada-bfb6-105f8111a6ed
+  m_Id: 490f3b30-7a40-402a-a393-dc5a3a9176e1
 --- !u!114 &-8749839501692032949
 MonoBehaviour:
   m_ObjectHideFlags: 0
