@@ -8,7 +8,8 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     [SerializeField] private Transform PointFront;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private ArcadeKart kartScript;
-    
+    [SerializeField] private GameObject particleSpeed;
+
     public GameObject Item;
 
 
@@ -19,7 +20,10 @@ public class PlayerThrow : MonoBehaviour, ITouchable
        if (type == 0) // luckybox
        {
             if (Item == null)
+            {
                 Item = SkillsManager.main.getPowerUp();
+                UIPowerUp.main.itemToUI(Item);
+            }
        }else if(type == 1) //SnowBall
        { 
             StartCoroutine(StunTaken()); 
@@ -49,6 +53,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
                         Instantiate(Item, PointFront.position, PointFront.rotation);
                     }
                     Item = null;
+                    UIPowerUp.main.itemToUI(Item);
                 }
             }
 
@@ -56,11 +61,13 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     }
     private IEnumerator PotionSpeedTaken() // Potion Speed
     {
+        particleSpeed.SetActive(true);
         kartScript.baseStats.Acceleration += SkillsManager.main.potionSpeedAccAdd;
         kartScript.baseStats.TopSpeed += SkillsManager.main.potionSpeedTopSpeedAdd;
         yield return new WaitForSeconds(SkillsManager.main.potionSpeedDuration);
         kartScript.baseStats.Acceleration -= SkillsManager.main.potionSpeedAccAdd;
         kartScript.baseStats.TopSpeed -= SkillsManager.main.potionSpeedTopSpeedAdd;
+        particleSpeed.SetActive(false);
     }
 
     private IEnumerator StunTaken() // Snowball
