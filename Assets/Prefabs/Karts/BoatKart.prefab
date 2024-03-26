@@ -1282,6 +1282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointFront: {fileID: 8168399067418378648}
   rb: {fileID: 2686829313085064381}
+  kartScript: {fileID: 2686829313085064382}
   Item: {fileID: 0}
 --- !u!4 &2686829313085064380 stripped
 Transform:
@@ -1295,6 +1296,18 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 7401669408120491559}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2686829313085064382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7401669408120491559}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2686829313085064379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2e8893a3093437d9d101b53db56941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8811069872649213815
 PrefabInstance:
   m_ObjectHideFlags: 0
