@@ -14,12 +14,17 @@ public class UIPowerUp : MonoBehaviour
         main = this;
     }
 
-    public void itemToUI(GameObject item)
+    public void itemToUI(GameObject item) // verifica a tag do gameobject para mudar o sprite na UI
     {
         if (item == null)
         {
-            imagemUI.sprite = null;
-        } else if (item.gameObject.tag == "SnowBall")
+            imagemUI.enabled = false;
+        } else
+        {
+            imagemUI.enabled = true;
+        }
+        
+        if (item.gameObject.tag == "SnowBall")
         {
             imagemUI.sprite = itensSprite[0];
         }
