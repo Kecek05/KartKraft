@@ -15,6 +15,7 @@ public class Respawner : MonoBehaviour
 
     //Camera olhar para o objeto certo
     public GameObject[] cameraLook;
+    public GameObject[] cameraLook2;
     void Start()
     {
         GameObject carselected = KartSelector.selectedCarObj;
@@ -36,9 +37,9 @@ public class Respawner : MonoBehaviour
         virtualCameras[0].LookAt = cameraLook[0].transform;
 
         KeyboardInput input = car.GetComponent<KeyboardInput>();
-        input.TurnInputName = "HorizontalP1";
-        input.AccelerateButtonName = "AccelerateP1";
-        input.BrakeButtonName = "BrakeP1";
+        input.TurnInputName = "Horizontal";
+        input.AccelerateButtonName = "Accelerate";
+        input.BrakeButtonName = "Brake";
 
         GameObject carselected2 = KartSelector.selectedCarObj;
         GameObject car2 = Instantiate(carselected2, spawnPoints[1].position, spawnPoints[1].rotation);
@@ -46,19 +47,20 @@ public class Respawner : MonoBehaviour
         
 
         Transform[] children2 = car2.transform.GetComponentsInChildren<Transform>();
-        cameraLook = new GameObject[children.Length];
+        cameraLook2 = new GameObject[children2.Length];
         int index2 = 0;
-        foreach (Transform child2 in children)
+        foreach (Transform child2 in children2)
         {
             if (child2.name == "KartBouncingCapsule")
             {
-                cameraLook[index2++] = child2.gameObject;
+                cameraLook2[index2++] = child2.gameObject;
                 break;
             }
         }
 
+
         virtualCameras[1].Follow = car2.transform;
-        virtualCameras[1].LookAt = cameraLook[1].transform;
+        virtualCameras[1].LookAt = cameraLook2[0].transform;
 
         KeyboardInput input2 = car2.GetComponent<KeyboardInput>();
         input2.TurnInputName = "HorizontalP2";

@@ -54,7 +54,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
                         Instantiate(Item, PointFront.position, PointFront.rotation);
                     }
                     Item = null;
-                    UIPowerUp.main.itemToUI(Item);
+                    //UIPowerUp.main.itemToUI(Item);
                 }
             }
 

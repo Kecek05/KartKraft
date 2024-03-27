@@ -8,6 +8,7 @@ public class KartSelector : MonoBehaviour
 
     public GameObject[] cartList;
     public int selectedCar = 0;
+    public int selectedCar2Player = 0;
     public GameObject currentCar;
     public GameObject carousel;
     public string SceneName;
