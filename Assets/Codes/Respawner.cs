@@ -1,4 +1,5 @@
 using Cinemachine;
+using KartGame.KartSystems;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -9,7 +10,7 @@ public class Respawner : MonoBehaviour
 
     public GameObject[] carList;
     public Transform[] spawnPoints;
-    public CinemachineVirtualCamera virtualCamera;
+    public CinemachineVirtualCamera[] virtualCameras;
 
 
     //Camera olhar para o objeto certo
@@ -27,11 +28,42 @@ public class Respawner : MonoBehaviour
             if (child.name == "KartBouncingCapsule")
             {
                 cameraLook[index++] = child.gameObject;
+                break;
             }
         }
 
-        virtualCamera.Follow = car.transform;
-        virtualCamera.LookAt = cameraLook[0].transform;
+        virtualCameras[0].Follow = car.transform;
+        virtualCameras[0].LookAt = cameraLook[0].transform;
+
+        KeyboardInput input = car.GetComponent<KeyboardInput>();
+        input.TurnInputName = "HorizontalP1";
+        input.AccelerateButtonName = "AccelerateP1";
+        input.BrakeButtonName = "BrakeP1";
+
+        GameObject carselected2 = KartSelector.selectedCarObj;
+        GameObject car2 = Instantiate(carselected2, spawnPoints[1].position, spawnPoints[1].rotation);
+        print(car2);
+        
+
+        Transform[] children2 = car2.transform.GetComponentsInChildren<Transform>();
+        cameraLook = new GameObject[children.Length];
+        int index2 = 0;
+        foreach (Transform child2 in children)
+        {
+            if (child2.name == "KartBouncingCapsule")
+            {
+                cameraLook[index2++] = child2.gameObject;
+                break;
+            }
+        }
+
+        virtualCameras[1].Follow = car2.transform;
+        virtualCameras[1].LookAt = cameraLook[1].transform;
+
+        KeyboardInput input2 = car2.GetComponent<KeyboardInput>();
+        input2.TurnInputName = "HorizontalP2";
+        input2.AccelerateButtonName = "AccelerateP2";
+        input2.BrakeButtonName = "BrakeP2";
     }
 
 }
