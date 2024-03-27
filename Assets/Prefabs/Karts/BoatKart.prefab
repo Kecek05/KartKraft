@@ -5974,7 +5974,7 @@ PrefabInstance:
     - target: {fileID: 4895846115356922113, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
       propertyPath: m_Name
-      value: BoatBouncingCapsule
+      value: KartBouncingCapsule
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115356922113, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
@@ -6092,6 +6092,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: -8749839501692032949}
+    - targetCorrespondingSourceObject: {fileID: 4895846115232909980, guid: cba6236a3ca88a54081cc989c4f0c08a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7665105420201900366}
   m_SourcePrefab: {fileID: 100100000, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
 --- !u!1 &2686829313085064379 stripped
 GameObject:
@@ -6106,12 +6110,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2686829313085064379}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: 490f3b30-7a40-402a-a393-dc5a3a9176e1
+  m_Id: 248654ca-70b8-45dd-bea2-3a420328b94b
 --- !u!114 &-8749839501692032949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6124,11 +6128,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd8c515d0f42b541a74ce8fc17698bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isP1: 0
+  UiPower: {fileID: 7665105420201900366}
   PointFront: {fileID: 8168399067418378648}
   rb: {fileID: 2686829313085064381}
   kartScript: {fileID: 2686829313085064382}
   particleSpeed: {fileID: 2735033084850967080}
   Item: {fileID: 0}
+--- !u!114 &7665105420201900366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2686829313085064379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdee8ce1a6b5c843be78008588274ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itensSprite:
+  - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  imagemUI: {fileID: 0}
 --- !u!4 &2686829313085064380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,

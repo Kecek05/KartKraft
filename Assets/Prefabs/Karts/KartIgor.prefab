@@ -5306,6 +5306,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 960945576348577260}
+    - targetCorrespondingSourceObject: {fileID: 4895846115232909980, guid: cba6236a3ca88a54081cc989c4f0c08a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7984148808829416774}
   m_SourcePrefab: {fileID: 100100000, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
 --- !u!1 &6670785549068649224 stripped
 GameObject:
@@ -5325,11 +5329,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd8c515d0f42b541a74ce8fc17698bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isP1: 0
+  UiPower: {fileID: 7984148808829416774}
   PointFront: {fileID: 8715146191465353808}
   rb: {fileID: 6670785549068649230}
   kartScript: {fileID: 6670785549068649229}
   particleSpeed: {fileID: 381749326415850285}
   Item: {fileID: 0}
+--- !u!114 &7984148808829416774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670785549068649224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdee8ce1a6b5c843be78008588274ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itensSprite:
+  - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  imagemUI: {fileID: 0}
 --- !u!114 &6670785549068649229 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a,

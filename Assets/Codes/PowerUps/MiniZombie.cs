@@ -50,7 +50,7 @@ public class MiniZombie : MonoBehaviour
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
         // Verifica se há pelo menos dois jogadores
-        if (players.Length > 2)
+        if (players.Length > 0)
         {
             // Cria uma lista para armazenar as distâncias dos jogadores
             List<Tuple<GameObject, float>> distances = new List<Tuple<GameObject, float>>();
@@ -73,19 +73,43 @@ public class MiniZombie : MonoBehaviour
 
     private void FindFather()
     {
-        GameObject[] playersTarget = GameObject.FindGameObjectsWithTag("Player");
-        if (playersTarget.Length > 0)
+        //GameObject[] playersTarget = GameObject.FindGameObjectsWithTag("Player");
+        //if (playersTarget.Length > 0)
+        //{
+        //    float shortestDistance = Vector3.Distance(transform.position, playersTarget[0].transform.position);
+        //    for (int i = 0; i < playersTarget.Length; i++)
+        //    {
+        //        float distance = Vector3.Distance(transform.position, playersTarget[i].transform.position);
+        //        if (distance < shortestDistance)
+        //        {
+        //            shortestDistance = distance;
+        //            father = playersTarget[i];
+        //        }
+        //    }
+        //}
+
+
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+        // Verifica se há pelo menos dois jogadores
+        if (players.Length > 0)
         {
-            float shortestDistance = Vector3.Distance(transform.position, playersTarget[0].transform.position);
-            for (int i = 0; i < playersTarget.Length; i++)
+            // Cria uma lista para armazenar as distâncias dos jogadores
+            List<Tuple<GameObject, float>> distances = new List<Tuple<GameObject, float>>();
+
+            // Calcula a distância de cada jogador para o inimigo e adiciona ao lista
+            foreach (GameObject player in players)
             {
-                float distance = Vector3.Distance(transform.position, playersTarget[i].transform.position);
-                if (distance < shortestDistance)
-                {
-                    shortestDistance = distance;
-                    father = playersTarget[i];
-                }
+                float distance = Vector3.Distance(transform.position, player.transform.position);
+                distances.Add(new Tuple<GameObject, float>(player, distance));
             }
+
+            // Ordena a lista de acordo com as distâncias
+            distances.Sort((x, y) => x.Item2.CompareTo(y.Item2));
+
+            // O segundo jogador mais próximo é o segundo item na lista (índice 1)
+            father = distances[0].Item1;
         }
+        print(father + " FATHER");
     }
 }

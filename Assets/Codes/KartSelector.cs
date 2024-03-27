@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class KartSelector : MonoBehaviour
 {
+    [SerializeField] private GameObject BlinkObj;
     private int playerChossing = 0; 
     public TextMeshProUGUI txtPlayer;
     public GameObject[] cartList;
@@ -59,13 +60,21 @@ public class KartSelector : MonoBehaviour
         if(playerChossing == 0)
         {
             selectedCarObj = cartList[selectedCar];
-            
-            txtPlayer.text = "Player 2";
-            playerChossing += 1;
+            StartCoroutine(blinkChoice());
+           
         } else if(playerChossing == 1)
         {
             selectedCarObj2Player = cartList[selectedCar];
             SceneManager.LoadScene(SceneName);
         }
+    }
+
+    private IEnumerator blinkChoice() // Snowball
+    {
+        BlinkObj.SetActive(true);
+        yield return new WaitForSeconds(3);
+        BlinkObj.SetActive(false);
+        txtPlayer.text = "Player 2";
+        playerChossing += 1;
     }
 }

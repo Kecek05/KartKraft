@@ -5478,6 +5478,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4811689612319602179, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 1342195566978272834, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
+    - {fileID: 8525383435106009120, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     m_RemovedGameObjects:
     - {fileID: 346156761350235758, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 8424755533331784800, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
@@ -5495,6 +5496,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1039471502323941861}
+    - targetCorrespondingSourceObject: {fileID: 8179933451620151250, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5985737380287777353}
   m_SourcePrefab: {fileID: 100100000, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
 --- !u!1 &4214037796906162592 stripped
 GameObject:
@@ -5514,11 +5519,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd8c515d0f42b541a74ce8fc17698bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isP1: 0
+  UiPower: {fileID: 5985737380287777353}
   PointFront: {fileID: 7601236451574123374}
   rb: {fileID: 4214037796906162598}
   kartScript: {fileID: 4214037796906162597}
   particleSpeed: {fileID: 1056411299137875381}
   Item: {fileID: 0}
+--- !u!114 &5985737380287777353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214037796906162592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdee8ce1a6b5c843be78008588274ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itensSprite:
+  - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  imagemUI: {fileID: 0}
 --- !u!114 &4214037796906162597 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8179933451620151255, guid: 87bde4edc17b4e947a024fa323d470f2,

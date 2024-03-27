@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerThrow : MonoBehaviour, ITouchable
 {
+    public bool isP1;
+    [SerializeField] private UIPowerUp UiPower;
     [SerializeField] private Transform PointFront;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private ArcadeKart kartScript;
@@ -20,7 +22,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             if (Item == null)
             {
                 Item = SkillsManager.main.getPowerUp();
-                UIPowerUp.main.itemToUI(Item);
+                UiPower.itemToUI(Item, false);
             }
        }else if(type == 1) //SnowBall
        { 
@@ -32,34 +34,45 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     }
 
-    void Start()
-    {
-
-    }
-
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if(isP1)
         {
-            if (PointFront != null)
-            {
-                if(Item != null)
-                {
-                    if(Item.gameObject.tag == "PocaoSpeed")
-                    {
-                        StartCoroutine(PotionSpeedTaken());
-                    } else
-                    {
-                        Instantiate(Item, PointFront.position, PointFront.rotation);
-                    }
-                    Item = null;
-                    //UIPowerUp.main.itemToUI(Item);
-                }
-            }
 
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                shootPressed();
+            }
+        } else
+        {
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                shootPressed();
+            }
         }
     }
+
+    private void shootPressed()
+    {
+        if (PointFront != null)
+        {
+            if (Item != null)
+            {
+                if (Item.gameObject.tag == "PocaoSpeed")
+                {
+                    StartCoroutine(PotionSpeedTaken());
+                }
+                else
+                {
+                    Instantiate(Item, PointFront.position, PointFront.rotation);
+                }
+                Item = null;
+            }
+                UiPower.itemToUI(Item, true);
+        }
+    }
+
     private IEnumerator PotionSpeedTaken() // Potion Speed
     {
         particleSpeed.SetActive(true);

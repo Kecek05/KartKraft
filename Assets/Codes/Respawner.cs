@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Respawner : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Respawner : MonoBehaviour
     public GameObject[] carList;
     public Transform[] spawnPoints;
     public CinemachineVirtualCamera[] virtualCameras;
-
+    public Image[] imagensUI;
 
     //Camera olhar para o objeto certo
     public GameObject[] cameraLook;
@@ -20,6 +21,10 @@ public class Respawner : MonoBehaviour
     {
         GameObject carselected = KartSelector.selectedCarObj;
         GameObject car = Instantiate(carselected, spawnPoints[0].position, spawnPoints[0].rotation);
+        UIPowerUp uiP1 = car.transform.GetComponent<UIPowerUp>();
+        uiP1.imagemUI = imagensUI[0];
+        PlayerThrow throwP1 = car.transform.GetComponent<PlayerThrow>();
+        throwP1.isP1 = true;
 
         Transform[] children = car.transform.GetComponentsInChildren<Transform>();
         cameraLook = new GameObject[children.Length];
@@ -43,8 +48,11 @@ public class Respawner : MonoBehaviour
 
         GameObject carselected2 = KartSelector.selectedCarObj2Player;
         GameObject car2 = Instantiate(carselected2, spawnPoints[1].position, spawnPoints[1].rotation);
-        print(car2);
-        
+        UIPowerUp uiP2 = car2.transform.GetComponent<UIPowerUp>();
+        uiP2.imagemUI = imagensUI[1];
+        PlayerThrow throwP2 = car2.transform.GetComponent<PlayerThrow>();
+        throwP2.isP1 = false;
+
 
         Transform[] children2 = car2.transform.GetComponentsInChildren<Transform>();
         cameraLook2 = new GameObject[children2.Length];
