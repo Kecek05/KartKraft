@@ -1266,6 +1266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf34dabdd157d58459b63b042eecdb29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txtPlayer: {fileID: 1664378021}
   cartList:
   - {fileID: 4214037796906162592, guid: 4d92fd6e753f4f54190b247c939f4078, type: 3}
   - {fileID: 2686829313085064379, guid: 98369923c8ecfb14cbf20602c4c276e7, type: 3}
@@ -2023,6 +2024,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1614855757}
     m_Modifications:
+    - target: {fileID: 1039471502323941861, guid: 4d92fd6e753f4f54190b247c939f4078,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039471502323941861, guid: 4d92fd6e753f4f54190b247c939f4078,
+        type: 3}
+      propertyPath: kartScript
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4214037796906162592, guid: 4d92fd6e753f4f54190b247c939f4078,
         type: 3}
       propertyPath: m_Name

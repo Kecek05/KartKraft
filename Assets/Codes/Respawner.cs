@@ -41,7 +41,7 @@ public class Respawner : MonoBehaviour
         input.AccelerateButtonName = "Accelerate";
         input.BrakeButtonName = "Brake";
 
-        GameObject carselected2 = KartSelector.selectedCarObj;
+        GameObject carselected2 = KartSelector.selectedCarObj2Player;
         GameObject car2 = Instantiate(carselected2, spawnPoints[1].position, spawnPoints[1].rotation);
         print(car2);
         

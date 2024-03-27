@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class KartSelector : MonoBehaviour
 {
-
+    private int playerChossing = 0; 
+    public TextMeshProUGUI txtPlayer;
     public GameObject[] cartList;
     public int selectedCar = 0;
-    public int selectedCar2Player = 0;
+    
     public GameObject currentCar;
     public GameObject carousel;
     public string SceneName;
     public static GameObject selectedCarObj;
+    public static GameObject selectedCarObj2Player;
 
     private void Update()
     {
@@ -52,7 +56,16 @@ public class KartSelector : MonoBehaviour
 
     public void SelectCar()
     {
-        selectedCarObj = cartList[selectedCar];
-        SceneManager.LoadScene(SceneName);
+        if(playerChossing == 0)
+        {
+            selectedCarObj = cartList[selectedCar];
+            
+            txtPlayer.text = "Player 2";
+            playerChossing += 1;
+        } else if(playerChossing == 1)
+        {
+            selectedCarObj2Player = cartList[selectedCar];
+            SceneManager.LoadScene(SceneName);
+        }
     }
 }
