@@ -7,7 +7,10 @@ public class LuckyBox : MonoBehaviour
 
 
 
-
+    private void Update()
+    {
+        transform.Rotate(Vector3.up * 30 * Time.deltaTime);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
