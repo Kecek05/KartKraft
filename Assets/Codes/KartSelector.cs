@@ -19,6 +19,8 @@ public class KartSelector : MonoBehaviour
     public static GameObject selectedCarObj;
     public static GameObject selectedCarObj2Player;
 
+    public static GameObject[] selectedCars;
+
     private void Update()
     {
         currentCar = cartList[selectedCar];
@@ -69,7 +71,7 @@ public class KartSelector : MonoBehaviour
         }
     }
 
-    private IEnumerator blinkChoice() // Snowball
+    private IEnumerator blinkChoice()
     {
         BlinkObj.SetActive(true);
         yield return new WaitForSeconds(3);

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing.Text;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class PlayerThrow : MonoBehaviour, ITouchable
 {
@@ -18,7 +19,6 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     [SerializeField] private Transform[] pecasCarro;
     private bool isRotating;
-   
 
     public void touch(int type) // coisas que tocao
     {
@@ -122,10 +122,8 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     }
     private void rotateStart(float time)
     {
-        print("ROTATE START");
         if (!isRotating)
         {
-            print("notRotation");
             StartCoroutine(stunFeedback(time));
             isRotating = true;
         }
@@ -133,7 +131,6 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     private IEnumerator stunFeedback(float time)
     {
-        print("stunFeedbakc");
         Quaternion positionInit = transform.rotation;
         float elapsedTime = 0f;
 
@@ -149,8 +146,10 @@ public class PlayerThrow : MonoBehaviour, ITouchable
         }
         if(elapsedTime >= time)
         {
-            print("final");
-           transform.rotation = positionInit;
+            foreach (Transform peca in pecasCarro)
+            {
+                peca.rotation = positionInit;
+            }
            isRotating = false;
         }
     }
