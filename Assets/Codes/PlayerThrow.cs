@@ -122,16 +122,18 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     }
     private void rotateStart(float time)
     {
+        print("ROTATE START");
         if (!isRotating)
         {
-            stunFeedback(time);
+            print("notRotation");
+            StartCoroutine(stunFeedback(time));
             isRotating = true;
         }
     }
 
     private IEnumerator stunFeedback(float time)
     {
-
+        print("stunFeedbakc");
         Quaternion positionInit = transform.rotation;
         float elapsedTime = 0f;
 
@@ -143,8 +145,13 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             }
             elapsedTime += Time.deltaTime;
             yield return null;
+            print(elapsedTime);
         }
-       transform.rotation = positionInit;
-       isRotating = false;
+        if(elapsedTime >= time)
+        {
+            print("final");
+           transform.rotation = positionInit;
+           isRotating = false;
+        }
     }
 }
