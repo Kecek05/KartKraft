@@ -54883,6 +54883,7 @@ MonoBehaviour:
   - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
   - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
   - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: 1150896209, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
   imagemUI: {fileID: 2116300857}
 --- !u!114 &1399743294
 MonoBehaviour:
@@ -73243,6 +73244,7 @@ MonoBehaviour:
   - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
   - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
   - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: 1150896209, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
   imagemUI: {fileID: 1804386678}
 --- !u!1001 &1840120609
 PrefabInstance:
@@ -77317,11 +77319,13 @@ MonoBehaviour:
   - {fileID: 1918344633838322404, guid: 841a2bd00c8f121409aaa04bb2c9b9c9, type: 3}
   - {fileID: 2122216250970363506, guid: 5cda3b08076327d42b6d2bf359ec56d7, type: 3}
   - {fileID: 5642706998208230477, guid: 053d8df06e0f9064ca93451e922e0939, type: 3}
+  - {fileID: 8224284606094477550, guid: 1824b2439cb6bdc4489571e6e78615ab, type: 3}
   stunTime: 3
   MiniZombiestunTime: 5
-  potionSpeedDuration: 3
+  potionSpeedDuration: 4
   potionSpeedAccAdd: 10
   potionSpeedTopSpeedAdd: 10
+  teiaStunDuration: 3
 --- !u!1001 &1937061325
 PrefabInstance:
   m_ObjectHideFlags: 0

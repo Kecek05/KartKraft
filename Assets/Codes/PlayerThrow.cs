@@ -7,7 +7,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 {
     public bool isP1;
     [SerializeField] private UIPowerUp UiPower;
-    [SerializeField] private Transform PointFront;
+    [SerializeField] private Transform[] Points;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private ArcadeKart kartScript;
     [SerializeField] private GameObject particleSpeed;
@@ -30,7 +30,10 @@ public class PlayerThrow : MonoBehaviour, ITouchable
        } else if (type == 2) // MiniZombie
        {
             StartCoroutine(MiniZombieStunTaken());
-       }
+       } else if (type == 3) // teia
+        {
+            StartCoroutine(TeiaStunTaken());
+        }
 
     }
 
@@ -55,17 +58,20 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     private void shootPressed()
     {
-        if (PointFront != null)
+        if (Points != null)
         {
             if (Item != null)
             {
                 if (Item.gameObject.tag == "PocaoSpeed")
                 {
                     StartCoroutine(PotionSpeedTaken());
+                } else if(Item.gameObject.tag == "Teia")
+                {
+                    Instantiate(Item, Points[1].position, Points[1].rotation);
                 }
                 else
                 {
-                    Instantiate(Item, PointFront.position, PointFront.rotation);
+                    Instantiate(Item, Points[0].position, Points[0].rotation);
                 }
                 Item = null;
             }
@@ -94,6 +100,13 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     {
         rb.constraints = RigidbodyConstraints.FreezePosition;
         yield return new WaitForSeconds(SkillsManager.main.MiniZombiestunTime);
+        rb.constraints = RigidbodyConstraints.None;
+    }
+
+    private IEnumerator TeiaStunTaken() // teia
+    {
+        rb.constraints = RigidbodyConstraints.FreezePosition;
+        yield return new WaitForSeconds(SkillsManager.main.teiaStunDuration);
         rb.constraints = RigidbodyConstraints.None;
     }
 
