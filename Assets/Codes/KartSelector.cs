@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class KartSelector : MonoBehaviour
 {
+
+    public static KartSelector main;
     [SerializeField] private GameObject BlinkObj;
     private int playerChossing = 0; 
     public TextMeshProUGUI txtPlayer;
@@ -19,8 +21,13 @@ public class KartSelector : MonoBehaviour
     public static GameObject selectedCarObj;
     public static GameObject selectedCarObj2Player;
 
-    public static GameObject[] selectedCars;
+    public GameObject[] confirmedCars;
 
+
+    private void Awake()
+    {
+        main = this;
+    }
     private void Update()
     {
         currentCar = cartList[selectedCar];
@@ -61,12 +68,12 @@ public class KartSelector : MonoBehaviour
     {
         if(playerChossing == 0)
         {
-            selectedCarObj = cartList[selectedCar];
+            confirmedCars[0] = cartList[selectedCar];
             StartCoroutine(blinkChoice());
            
         } else if(playerChossing == 1)
         {
-            selectedCarObj2Player = cartList[selectedCar];
+            confirmedCars[1] = cartList[selectedCar];
             SceneManager.LoadScene(SceneName);
         }
     }

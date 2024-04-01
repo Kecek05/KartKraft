@@ -1285,6 +1285,9 @@ MonoBehaviour:
   currentCar: {fileID: 0}
   carousel: {fileID: 1614855756}
   SceneName: MainScene
+  confirmedCars:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &635719008
 GameObject:
   m_ObjectHideFlags: 0
