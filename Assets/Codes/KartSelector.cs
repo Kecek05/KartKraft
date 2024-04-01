@@ -9,6 +9,7 @@ public class KartSelector : MonoBehaviour
 {
 
     public static KartSelector main;
+
     [SerializeField] private GameObject BlinkObj;
     private int playerChossing = 0; 
     public TextMeshProUGUI txtPlayer;
@@ -18,8 +19,6 @@ public class KartSelector : MonoBehaviour
     public GameObject currentCar;
     public GameObject carousel;
     public string SceneName;
-    public static GameObject selectedCarObj;
-    public static GameObject selectedCarObj2Player;
 
     public GameObject[] confirmedCars;
 
