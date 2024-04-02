@@ -56,7 +56,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 3
-    scalar: 1
+    scalar: 0.02
     minScalar: 0.01
     maxCurve:
       serializedVersion: 2
@@ -6113,7 +6113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: 833a010a-6191-4669-a536-0aac1ca60da4
+  m_Id: 4db1b44c-32f8-47d7-83ce-42ccf8e33717
 --- !u!114 &7848857973771131861
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -56,7 +56,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 3
-    scalar: 1
+    scalar: 0.02
     minScalar: 0.01
     maxCurve:
       serializedVersion: 2
@@ -5018,6 +5018,16 @@ PrefabInstance:
       propertyPath: m_Id
       value: a733bf48-01ad-461e-b170-265b42f91afd
       objectReference: {fileID: 0}
+    - target: {fileID: 3310177827008995325, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340991076532512431, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 4811689612319602179, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: PointFront
@@ -5514,6 +5524,7 @@ PrefabInstance:
     - {fileID: 346156761350235758, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 8424755533331784800, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 7872524239060739500, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
+    - {fileID: 3310177827008995325, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8179933451620151253, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}

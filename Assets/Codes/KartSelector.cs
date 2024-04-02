@@ -15,6 +15,8 @@ public class KartSelector : MonoBehaviour
     public TextMeshProUGUI txtPlayer;
     public GameObject[] cartList;
     public int selectedCar = 0;
+
+    public bool canSelect;
     
     public GameObject currentCar;
     public GameObject carousel;
@@ -27,6 +29,12 @@ public class KartSelector : MonoBehaviour
     {
         main = this;
     }
+
+    private void Start()
+    {
+        canSelect = true;
+    }
+
     private void Update()
     {
         currentCar = cartList[selectedCar];
@@ -65,14 +73,16 @@ public class KartSelector : MonoBehaviour
 
     public void SelectCar()
     {
-        if(playerChossing == 0)
+        if(playerChossing == 0 && canSelect)
         {
             confirmedCars[0] = cartList[selectedCar];
+            canSelect = false;
             StartCoroutine(blinkChoice());
            
-        } else if(playerChossing == 1)
+        } else if(playerChossing == 1 && canSelect)
         {
             confirmedCars[1] = cartList[selectedCar];
+            canSelect = false;
             SceneManager.LoadScene(SceneName);
         }
     }
@@ -84,5 +94,6 @@ public class KartSelector : MonoBehaviour
         BlinkObj.SetActive(false);
         txtPlayer.text = "Player 2";
         playerChossing += 1;
+        canSelect = true;
     }
 }
