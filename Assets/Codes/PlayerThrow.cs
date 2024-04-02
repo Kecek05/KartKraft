@@ -15,7 +15,12 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     [SerializeField] private GameObject particleSpeed;
     [SerializeField] private float stunRotationSpeed;
 
+    [SerializeField] private GameObject capaceteObj;
+
+    [SerializeField] private Vector3 offCapa;
+
     public GameObject Item;
+    private bool haveCapacete;
 
     [SerializeField] private Transform[] pecasCarro;
     private bool isRotating;
@@ -31,16 +36,30 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             }
        }else if(type == 1) //SnowBall
        { 
+            if(haveCapacete) { 
+                LoseCapacete();
+                return;
+            }
             StartCoroutine(StunTaken());
             rotateStart(SkillsManager.main.SnowstunTime);
             
        } else if (type == 2) // MiniZombie
        {
+            if (haveCapacete)
+            {
+                LoseCapacete();
+                return;
+            }
             StartCoroutine(MiniZombieStunTaken());
             rotateStart(SkillsManager.main.MiniZombiestunTime);
 
         } else if (type == 3) // teia
         {
+            if (haveCapacete)
+            {
+                LoseCapacete();
+                return;
+            }
             StartCoroutine(TeiaStunTaken());
             rotateStart(SkillsManager.main.teiaStunDuration);
  
@@ -79,6 +98,9 @@ public class PlayerThrow : MonoBehaviour, ITouchable
                 } else if(Item.gameObject.tag == "Teia")
                 {
                     Instantiate(Item, Points[1].position, Points[1].rotation);
+                } else if (Item.CompareTag("Capacete"))
+                {
+                    takeCapacete();
                 }
                 else
                 {
@@ -155,5 +177,21 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             kartScript.baseStats.Steer = steerInit;
             isRotating = false;
         }
+    }
+
+    public void takeCapacete()
+    {
+        if (!haveCapacete)
+        {
+            haveCapacete = true;
+            capaceteObj = Instantiate(Item, Points[2].position, Points[2].rotation);
+            CapaceteScript capaScript = capaceteObj.transform.GetComponent<CapaceteScript>();
+            capaScript.FollowPlayer(this.gameObject, offCapa);
+        }
+    }
+    public void LoseCapacete()
+    {
+        haveCapacete = false;
+        Destroy(capaceteObj);
     }
 }

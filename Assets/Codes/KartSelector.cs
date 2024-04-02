@@ -12,7 +12,6 @@ public class KartSelector : MonoBehaviour
 
     [SerializeField] private GameObject BlinkObj;
     private int playerChossing = 0; 
-    public TextMeshProUGUI txtPlayer;
     public GameObject[] cartList;
     public int selectedCar = 0;
 
@@ -24,6 +23,7 @@ public class KartSelector : MonoBehaviour
 
     public GameObject[] confirmedCars;
 
+    [SerializeField] private GameObject[] lblPlayer;
 
     private void Awake()
     {
@@ -90,9 +90,10 @@ public class KartSelector : MonoBehaviour
     private IEnumerator blinkChoice()
     {
         BlinkObj.SetActive(true);
-        yield return new WaitForSeconds(3);
-        BlinkObj.SetActive(false);
-        txtPlayer.text = "Player 2";
+        yield return new WaitForSeconds(2f);
+        lblPlayer[0].SetActive(false);
+        lblPlayer[1].SetActive(true);
+        yield return new WaitForSeconds(0.5f);
         playerChossing += 1;
         canSelect = true;
     }
