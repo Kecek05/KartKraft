@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class Respawner : MonoBehaviour
 {
 
-    public GameObject[] carList;
     public Transform[] spawnPoints;
     public CinemachineVirtualCamera[] virtualCameras;
     public Image[] imagensUI;

@@ -11,7 +11,7 @@ public class SkillsManager : MonoBehaviour
 
 
     [Header("PowerUps")]
-    public float stunTime;
+    public float SnowstunTime;
     public float MiniZombiestunTime;
     public float potionSpeedDuration;
     public float potionSpeedAccAdd;

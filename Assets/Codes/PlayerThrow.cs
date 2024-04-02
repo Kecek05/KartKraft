@@ -32,7 +32,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
        }else if(type == 1) //SnowBall
        { 
             StartCoroutine(StunTaken());
-            rotateStart(SkillsManager.main.stunTime);
+            rotateStart(SkillsManager.main.SnowstunTime);
             
        } else if (type == 2) // MiniZombie
        {
@@ -104,7 +104,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     private IEnumerator StunTaken() // Snowball
     {
         rb.constraints = RigidbodyConstraints.FreezePosition;
-        yield return new WaitForSeconds(SkillsManager.main.stunTime);
+        yield return new WaitForSeconds(SkillsManager.main.SnowstunTime);
         rb.constraints = RigidbodyConstraints.None;
     }
     private IEnumerator MiniZombieStunTaken() // Snowball
