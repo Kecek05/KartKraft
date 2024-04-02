@@ -18511,7 +18511,6 @@ MonoBehaviour:
   - {fileID: 1804386678}
   - {fileID: 2116300857}
   cameraLook: []
-  cameraLook2: []
 --- !u!4 &461195539
 Transform:
   m_ObjectHideFlags: 0
@@ -27806,11 +27805,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3878065802378232314, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1839270241}
-    - targetCorrespondingSourceObject: {fileID: 3878065802378232314, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1399743292}
+      addedObject: {fileID: 1089951502}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1315839542190839943, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
         type: 3}
@@ -42183,6 +42178,64 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1089562070}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1089951501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1089951502}
+  - component: {fileID: 1089951503}
+  m_Layer: 5
+  m_Name: ItensControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1089951502
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089951501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1839270241}
+  - {fileID: 1399743292}
+  m_Father: {fileID: 1426604758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -434.0507, y: -67.64847}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1089951503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089951501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdee8ce1a6b5c843be78008588274ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itensSprite:
+  - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  - {fileID: 1150896209, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
+  imagensUI:
+  - {fileID: 1804386678}
+  - {fileID: 2116300857}
 --- !u!4 &1091237415 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de6fb935c7351ac4f990ad7f379cc140,
@@ -54839,7 +54892,6 @@ GameObject:
   - component: {fileID: 1399743292}
   - component: {fileID: 1399743295}
   - component: {fileID: 1399743294}
-  - component: {fileID: 1399743293}
   m_Layer: 5
   m_Name: ItemBoxP2
   m_TagString: Untagged
@@ -54854,37 +54906,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399743291}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2116300856}
-  m_Father: {fileID: 1426604758}
+  m_Father: {fileID: 1089951502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 89.899994, y: 291}
+  m_AnchoredPosition: {x: 49.99996, y: 161.29692}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1399743293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399743291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffdee8ce1a6b5c843be78008588274ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itensSprite:
-  - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: 1150896209, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  imagemUI: {fileID: 2116300857}
 --- !u!114 &1399743294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73162,7 +73196,6 @@ GameObject:
   - component: {fileID: 1839270241}
   - component: {fileID: 1839270243}
   - component: {fileID: 1839270242}
-  - component: {fileID: 1839270244}
   m_Layer: 5
   m_Name: ItemBoxP1
   m_TagString: Untagged
@@ -73177,17 +73210,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839270240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1804386677}
-  m_Father: {fileID: 1426604758}
+  m_Father: {fileID: 1089951502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 89.899994, y: -315}
+  m_AnchoredPosition: {x: 49.99996, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1839270242
@@ -73228,24 +73261,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839270240}
   m_CullTransparentMesh: 1
---- !u!114 &1839270244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839270240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffdee8ce1a6b5c843be78008588274ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itensSprite:
-  - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: 1150896209, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  imagemUI: {fileID: 1804386678}
 --- !u!1001 &1840120609
 PrefabInstance:
   m_ObjectHideFlags: 0

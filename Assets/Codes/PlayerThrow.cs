@@ -7,8 +7,7 @@ using UnityEngine.Video;
 
 public class PlayerThrow : MonoBehaviour, ITouchable
 {
-    public bool isP1;
-    [SerializeField] private UIPowerUp UiPower;
+    public int isP1;
     [SerializeField] private Transform[] Points;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform transBouncing;
@@ -28,7 +27,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             if (Item == null)
             {
                 Item = SkillsManager.main.getPowerUp();
-                UiPower.itemToUI(Item, false);
+                UIPowerUp.main.itemToUI(Item, false, isP1);
             }
        }else if(type == 1) //SnowBall
        { 
@@ -52,7 +51,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     void Update()
     {
-        if(isP1)
+        if(isP1 == 0)
         {
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -87,7 +86,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
                 }
                 Item = null;
             }
-                UiPower.itemToUI(Item, true);
+            UIPowerUp.main.itemToUI(Item, true, isP1);
         }
     }
 

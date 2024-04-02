@@ -25,12 +25,13 @@ public class Respawner : MonoBehaviour
             GameObject car = Instantiate(carselected, spawnPoints[i].position, spawnPoints[i].rotation); // instanciate
 
             //scripts
-            UIPowerUp ui = car.transform.GetComponent<UIPowerUp>();
-            ui.imagemUI = imagensUI[i];
+            PlayerThrow throwScript = car.transform.GetComponent<PlayerThrow>();
             if(i == 0)
             {
-                PlayerThrow throwScript = car.transform.GetComponent<PlayerThrow>();
-                throwScript.isP1 = true;
+                throwScript.isP1 = 0;
+            } else
+            {
+                throwScript.isP1 = 1;
             }
 
             //camera

@@ -5946,11 +5946,13 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8382584015098321529}
-    - targetCorrespondingSourceObject: {fileID: 4895846115232909980, guid: cba6236a3ca88a54081cc989c4f0c08a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2937020496051703701}
   m_SourcePrefab: {fileID: 100100000, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+--- !u!4 &8378568642906654772 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4895846115861964227, guid: cba6236a3ca88a54081cc989c4f0c08a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4014727965882461687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8378568643341155577 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4895846115356922126, guid: cba6236a3ca88a54081cc989c4f0c08a,
@@ -5975,7 +5977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: a1848e05-1e60-4df8-8274-08121c83d6bb
+  m_Id: ec91a06f-b90a-4ef6-aadb-eecea0317138
 --- !u!114 &8382584015098321529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5989,7 +5991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isP1: 0
-  UiPower: {fileID: 2937020496051703701}
   Points:
   - {fileID: 6561217977976586677}
   - {fileID: 4228183754533610303}
@@ -5999,24 +6000,10 @@ MonoBehaviour:
   particleSpeed: {fileID: 3977962672335047644}
   stunRotationSpeed: 550
   Item: {fileID: 0}
-  pecasCarro: []
---- !u!114 &2937020496051703701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8378568644290881387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffdee8ce1a6b5c843be78008588274ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itensSprite:
-  - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  imagemUI: {fileID: 0}
+  pecasCarro:
+  - {fileID: 8378568642906654772}
+  - {fileID: 3896388706963532637}
+  - {fileID: 7636510199816387632}
 --- !u!4 &8378568644290881388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,

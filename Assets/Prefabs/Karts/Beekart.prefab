@@ -4855,7 +4855,7 @@ Transform:
   m_GameObject: {fileID: 7329072002577697160}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.026, y: 0.1, z: -3.06}
+  m_LocalPosition: {x: 0.026, y: 0.1, z: -2.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5513,6 +5513,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 346156761350235758, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 8424755533331784800, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
+    - {fileID: 7872524239060739500, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8179933451620151253, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
@@ -5531,10 +5532,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1039471502323941861}
-    - targetCorrespondingSourceObject: {fileID: 8179933451620151250, guid: 87bde4edc17b4e947a024fa323d470f2,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5985737380287777353}
   m_SourcePrefab: {fileID: 100100000, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
 --- !u!1 &4214037796906162592 stripped
 GameObject:
@@ -5555,7 +5552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isP1: 0
-  UiPower: {fileID: 5985737380287777353}
   Points:
   - {fileID: 7601236451574123374}
   - {fileID: 540818765311085099}
@@ -5565,24 +5561,10 @@ MonoBehaviour:
   particleSpeed: {fileID: 5344290580867269855}
   stunRotationSpeed: 550
   Item: {fileID: 0}
-  pecasCarro: []
---- !u!114 &5985737380287777353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4214037796906162592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffdee8ce1a6b5c843be78008588274ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itensSprite:
-  - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  imagemUI: {fileID: 0}
+  pecasCarro:
+  - {fileID: 4214037798424671999}
+  - {fileID: 8873508967079374987}
+  - {fileID: 4608731914609423239}
 --- !u!114 &4214037796906162597 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8179933451620151255, guid: 87bde4edc17b4e947a024fa323d470f2,
@@ -5610,6 +5592,24 @@ Transform:
 --- !u!4 &4214037797852742194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8179933453120910400, guid: 87bde4edc17b4e947a024fa323d470f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5476292682937415282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4214037798424671999 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8179933452484067469, guid: 87bde4edc17b4e947a024fa323d470f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5476292682937415282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4608731914609423239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8361551098405897717, guid: 87bde4edc17b4e947a024fa323d470f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5476292682937415282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8873508967079374987 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3520330887655606009, guid: 87bde4edc17b4e947a024fa323d470f2,
     type: 3}
   m_PrefabInstance: {fileID: 5476292682937415282}
   m_PrefabAsset: {fileID: 0}

@@ -6,39 +6,39 @@ using UnityEngine.UI;
 
 public class UIPowerUp : MonoBehaviour
 {
-    //public static UIPowerUp main;
+    public static UIPowerUp main;
     public Sprite[] itensSprite;
-    public Image imagemUI;
+    public Image[] imagensUI;
 
-    //private void Awake()
-    //{
-    //    main = this;
-    //}
+    private void Awake()
+    {
+        main = this;
+    }
 
-    public void itemToUI(GameObject item, bool noItem) // verifica a tag do gameobject para mudar o sprite na UI
+    public void itemToUI(GameObject item, bool noItem, int i) // verifica a tag do gameobject para mudar o sprite na UI
     {
         if (noItem)
         {
-            imagemUI.enabled = false;
+            imagensUI[i].enabled = false;
             return;
         } else
         {
-            imagemUI.enabled = true;
+            imagensUI[i].enabled = true;
         }
         
         if (item.gameObject.tag == "SnowBall")
         {
-            imagemUI.sprite = itensSprite[0];
+            imagensUI[i].sprite = itensSprite[0];
         }
         else if(item.gameObject.tag == "PocaoSpeed")
         {
-            imagemUI.sprite = itensSprite[1];
+            imagensUI[i].sprite = itensSprite[1];
         } else if (item.gameObject.tag == "MiniZombie")
         {
-            imagemUI.sprite = itensSprite[2];
+            imagensUI[i].sprite = itensSprite[2];
         } else if (item.gameObject.tag == "Teia")
         {
-            imagemUI.sprite = itensSprite[3];
+            imagensUI[i].sprite = itensSprite[3];
         }
 
 
