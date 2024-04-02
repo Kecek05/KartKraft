@@ -100,6 +100,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe3baa81d356ef45a0446184d25bd44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetY: 2
-  offset: {x: 0, y: 1.5, z: 0}
+  offset: {x: 0, y: 0, z: 0}
   target: {fileID: 0}

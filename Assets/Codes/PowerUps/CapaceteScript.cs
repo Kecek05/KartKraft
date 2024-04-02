@@ -8,10 +8,10 @@ public class CapaceteScript : MonoBehaviour
 
     [SerializeField] private Vector3 offset;
     public GameObject target;
-    public void FollowPlayer(GameObject targetPlayer)
+    public void FollowPlayer(GameObject targetPlayer, Vector3 offsetPlayer)
     {
         target = targetPlayer;
-        Vector3 offset = new Vector3(0f, 0f, 0f);
+        offset = offsetPlayer;
     }
     private void Update()
     {

@@ -17,6 +17,8 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     [SerializeField] private GameObject capaceteObj;
 
+    [SerializeField] private Vector3 offCapa;
+
     public GameObject Item;
     private bool haveCapacete;
 
@@ -184,7 +186,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             haveCapacete = true;
             capaceteObj = Instantiate(Item, Points[2].position, Points[2].rotation);
             CapaceteScript capaScript = capaceteObj.transform.GetComponent<CapaceteScript>();
-            capaScript.FollowPlayer(this.gameObject);
+            capaScript.FollowPlayer(this.gameObject, offCapa);
         }
     }
     public void LoseCapacete()
