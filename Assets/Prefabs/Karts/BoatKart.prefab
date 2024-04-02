@@ -6143,6 +6143,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7401669408120491559}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2686829312156802857 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4895846115356922126, guid: cba6236a3ca88a54081cc989c4f0c08a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7401669408120491559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2686829313085064379 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4895846115232909980, guid: cba6236a3ca88a54081cc989c4f0c08a,
@@ -6180,9 +6186,10 @@ MonoBehaviour:
   - {fileID: 8168399067418378648}
   - {fileID: 4819592020109663413}
   rb: {fileID: 2686829313085064381}
+  transBouncing: {fileID: 2686829312156802857}
   kartScript: {fileID: 2686829313085064382}
   particleSpeed: {fileID: 2735033084850967080}
-  stunRotationSpeed: 600
+  stunRotationSpeed: 550
   Item: {fileID: 0}
   pecasCarro:
   - {fileID: 8811069872648818161}

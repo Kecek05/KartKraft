@@ -11,6 +11,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     [SerializeField] private UIPowerUp UiPower;
     [SerializeField] private Transform[] Points;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private Transform transBouncing;
     [SerializeField] private ArcadeKart kartScript;
     [SerializeField] private GameObject particleSpeed;
     [SerializeField] private float stunRotationSpeed;
@@ -131,6 +132,8 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     private IEnumerator stunFeedback(float time)
     {
+        float steerInit = kartScript.baseStats.Steer;
+        kartScript.baseStats.Steer = 0f;
         Quaternion positionInit = transform.rotation;
         float elapsedTime = 0f;
 
@@ -140,9 +143,9 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             {
                 peca.Rotate(Vector3.down, stunRotationSpeed * Time.deltaTime);
             }
+            
             elapsedTime += Time.deltaTime;
             yield return null;
-            print(elapsedTime);
         }
         if(elapsedTime >= time)
         {
@@ -150,7 +153,8 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             {
                 peca.rotation = positionInit;
             }
-           isRotating = false;
+            kartScript.baseStats.Steer = steerInit;
+            isRotating = false;
         }
     }
 }
