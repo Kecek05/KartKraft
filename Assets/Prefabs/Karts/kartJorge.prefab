@@ -56,7 +56,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 3
-    scalar: 1
+    scalar: 0.02
     minScalar: 0.01
     maxCurve:
       serializedVersion: 2
@@ -4863,6 +4863,37 @@ Transform:
   - {fileID: 1874142102829820568}
   m_Father: {fileID: 8337212023627539131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3226069850608547668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7604186047277669212}
+  m_Layer: 2
+  m_Name: PointInstancePowersBack
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7604186047277669212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3226069850608547668}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.026, y: 0.1, z: -2.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8337212023627539131}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4896065158616193368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6013,10 +6044,14 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
       insertIndex: 0
-      addedObject: {fileID: 5294627698104924661}
+      addedObject: {fileID: 7604186047277669212}
     - targetCorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
       insertIndex: 1
+      addedObject: {fileID: 5294627698104924661}
+    - targetCorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,
+        type: 3}
+      insertIndex: 2
       addedObject: {fileID: 513662929940821540}
     - targetCorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
@@ -6035,10 +6070,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7848857973771131861}
-    - targetCorrespondingSourceObject: {fileID: 4895846115232909980, guid: cba6236a3ca88a54081cc989c4f0c08a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3004961434280365250}
   m_SourcePrefab: {fileID: 100100000, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
 --- !u!114 &8337212023627539129 stripped
 MonoBehaviour:
@@ -6082,7 +6113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: e06d8a4e-e0c0-4bde-93af-018d79fa23e8
+  m_Id: 4db1b44c-32f8-47d7-83ce-42ccf8e33717
 --- !u!114 &7848857973771131861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6096,29 +6127,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isP1: 0
-  UiPower: {fileID: 3004961434280365250}
-  PointFront: {fileID: 513662929940821540}
+  Points:
+  - {fileID: 513662929940821540}
+  - {fileID: 7604186047277669212}
   rb: {fileID: 8337212023627539130}
+  transBouncing: {fileID: 8337212023751522606}
   kartScript: {fileID: 8337212023627539129}
   particleSpeed: {fileID: 1021503154168699279}
+  stunRotationSpeed: 550
   Item: {fileID: 0}
---- !u!114 &3004961434280365250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  pecasCarro:
+  - {fileID: 2478121979741063996}
+  - {fileID: 8337212024256581091}
+  - {fileID: 2827529776149665475}
+--- !u!4 &8337212023751522606 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4895846115356922126, guid: cba6236a3ca88a54081cc989c4f0c08a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3477394860032419872}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8337212023627539132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffdee8ce1a6b5c843be78008588274ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itensSprite:
-  - {fileID: -603323837, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: -1477688856, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  - {fileID: -948655013, guid: 55ff68240ac15ec499514b106b9ab517, type: 3}
-  imagemUI: {fileID: 0}
+--- !u!4 &8337212024256581091 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4895846115861964227, guid: cba6236a3ca88a54081cc989c4f0c08a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3477394860032419872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6326865117994563255
 PrefabInstance:
   m_ObjectHideFlags: 0

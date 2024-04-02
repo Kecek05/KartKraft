@@ -7,22 +7,38 @@ using UnityEngine.UI;
 
 public class KartSelector : MonoBehaviour
 {
+
+    public static KartSelector main;
+
     [SerializeField] private GameObject BlinkObj;
     private int playerChossing = 0; 
     public TextMeshProUGUI txtPlayer;
     public GameObject[] cartList;
     public int selectedCar = 0;
+
+    public bool canSelect;
     
     public GameObject currentCar;
     public GameObject carousel;
     public string SceneName;
-    public static GameObject selectedCarObj;
-    public static GameObject selectedCarObj2Player;
+
+    public GameObject[] confirmedCars;
+
+
+    private void Awake()
+    {
+        main = this;
+    }
+
+    private void Start()
+    {
+        canSelect = true;
+    }
 
     private void Update()
     {
         currentCar = cartList[selectedCar];
-        carousel.transform.position = Vector3.Lerp(carousel.transform.position,new Vector3(selectedCar * -7,0,0), Time.deltaTime);
+        carousel.transform.position = Vector3.Lerp(carousel.transform.position,new Vector3(selectedCar * -7,0,0), Time.deltaTime * 3);
 
         if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
@@ -57,24 +73,27 @@ public class KartSelector : MonoBehaviour
 
     public void SelectCar()
     {
-        if(playerChossing == 0)
+        if(playerChossing == 0 && canSelect)
         {
-            selectedCarObj = cartList[selectedCar];
+            confirmedCars[0] = cartList[selectedCar];
+            canSelect = false;
             StartCoroutine(blinkChoice());
            
-        } else if(playerChossing == 1)
+        } else if(playerChossing == 1 && canSelect)
         {
-            selectedCarObj2Player = cartList[selectedCar];
+            confirmedCars[1] = cartList[selectedCar];
+            canSelect = false;
             SceneManager.LoadScene(SceneName);
         }
     }
 
-    private IEnumerator blinkChoice() // Snowball
+    private IEnumerator blinkChoice()
     {
         BlinkObj.SetActive(true);
         yield return new WaitForSeconds(3);
         BlinkObj.SetActive(false);
         txtPlayer.text = "Player 2";
         playerChossing += 1;
+        canSelect = true;
     }
 }

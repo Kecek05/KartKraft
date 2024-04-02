@@ -1,19 +1,24 @@
 using KartGame.KartSystems;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class PlayerThrow : MonoBehaviour, ITouchable
 {
-    public bool isP1;
-    [SerializeField] private UIPowerUp UiPower;
-    [SerializeField] private Transform PointFront;
+    public int isP1;
+    [SerializeField] private Transform[] Points;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private Transform transBouncing;
     [SerializeField] private ArcadeKart kartScript;
     [SerializeField] private GameObject particleSpeed;
+    [SerializeField] private float stunRotationSpeed;
 
     public GameObject Item;
-   
+
+    [SerializeField] private Transform[] pecasCarro;
+    private bool isRotating;
 
     public void touch(int type) // coisas que tocao
     {
@@ -22,22 +27,31 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             if (Item == null)
             {
                 Item = SkillsManager.main.getPowerUp();
-                UiPower.itemToUI(Item, false);
+                UIPowerUp.main.itemToUI(Item, false, isP1);
             }
        }else if(type == 1) //SnowBall
        { 
-            StartCoroutine(StunTaken()); 
+            StartCoroutine(StunTaken());
+            rotateStart(SkillsManager.main.stunTime);
+            
        } else if (type == 2) // MiniZombie
        {
             StartCoroutine(MiniZombieStunTaken());
-       }
+            rotateStart(SkillsManager.main.MiniZombiestunTime);
+
+        } else if (type == 3) // teia
+        {
+            StartCoroutine(TeiaStunTaken());
+            rotateStart(SkillsManager.main.teiaStunDuration);
+ 
+        }
 
     }
 
 
     void Update()
     {
-        if(isP1)
+        if(isP1 == 0)
         {
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -55,21 +69,24 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     private void shootPressed()
     {
-        if (PointFront != null)
+        if (Points != null)
         {
             if (Item != null)
             {
                 if (Item.gameObject.tag == "PocaoSpeed")
                 {
                     StartCoroutine(PotionSpeedTaken());
+                } else if(Item.gameObject.tag == "Teia")
+                {
+                    Instantiate(Item, Points[1].position, Points[1].rotation);
                 }
                 else
                 {
-                    Instantiate(Item, PointFront.position, PointFront.rotation);
+                    Instantiate(Item, Points[0].position, Points[0].rotation);
                 }
                 Item = null;
             }
-                UiPower.itemToUI(Item, true);
+            UIPowerUp.main.itemToUI(Item, true, isP1);
         }
     }
 
@@ -97,4 +114,46 @@ public class PlayerThrow : MonoBehaviour, ITouchable
         rb.constraints = RigidbodyConstraints.None;
     }
 
+    private IEnumerator TeiaStunTaken() // teia
+    {
+        rb.constraints = RigidbodyConstraints.FreezePosition;
+        yield return new WaitForSeconds(SkillsManager.main.teiaStunDuration);
+        rb.constraints = RigidbodyConstraints.None;
+    }
+    private void rotateStart(float time)
+    {
+        if (!isRotating)
+        {
+            StartCoroutine(stunFeedback(time));
+            isRotating = true;
+        }
+    }
+
+    private IEnumerator stunFeedback(float time)
+    {
+        float steerInit = kartScript.baseStats.Steer;
+        kartScript.baseStats.Steer = 0f;
+        Quaternion positionInit = transform.rotation;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < time)
+        {
+            foreach (Transform peca in pecasCarro)
+            {
+                peca.Rotate(Vector3.down, stunRotationSpeed * Time.deltaTime);
+            }
+            
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        if(elapsedTime >= time)
+        {
+            foreach (Transform peca in pecasCarro)
+            {
+                peca.rotation = positionInit;
+            }
+            kartScript.baseStats.Steer = steerInit;
+            isRotating = false;
+        }
+    }
 }

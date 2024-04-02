@@ -16,6 +16,7 @@ public class SkillsManager : MonoBehaviour
     public float potionSpeedDuration;
     public float potionSpeedAccAdd;
     public float potionSpeedTopSpeedAdd;
+    public float teiaStunDuration;
 
     private void Awake()
     {

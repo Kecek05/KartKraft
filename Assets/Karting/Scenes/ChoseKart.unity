@@ -1793,6 +1793,9 @@ MonoBehaviour:
   currentCar: {fileID: 0}
   carousel: {fileID: 1614855756}
   SceneName: MainScene
+  confirmedCars:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &635719008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,7 +2337,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 30
   orthographic: 0
