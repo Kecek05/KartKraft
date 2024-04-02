@@ -4954,7 +4954,39 @@ Transform:
   m_Children:
   - {fileID: 2888985614333193499}
   - {fileID: 1826844185153954450}
+  - {fileID: 3279621904082597092}
   m_Father: {fileID: 8378568644290881388}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8968032148922098661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3279621904082597092}
+  m_Layer: 2
+  m_Name: PointInstancePowersUp
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3279621904082597092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8968032148922098661}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.689, z: -0.474}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3896388706963532637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1826844185153566802
 PrefabInstance:
@@ -5981,7 +6013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: 193c67cb-536d-4260-81a8-11f4c86f6cd9
+  m_Id: ac907bcc-96df-4ada-9d6a-a214aa693932
 --- !u!114 &8382584015098321529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5998,11 +6030,13 @@ MonoBehaviour:
   Points:
   - {fileID: 6561217977976586677}
   - {fileID: 4228183754533610303}
+  - {fileID: 3279621904082597092}
   rb: {fileID: 8378568644290881389}
   transBouncing: {fileID: 8378568643341155577}
   kartScript: {fileID: 8378568644290881390}
   particleSpeed: {fileID: 3977962672335047644}
   stunRotationSpeed: 550
+  capaceteObj: {fileID: 0}
   Item: {fileID: 0}
   pecasCarro:
   - {fileID: 8378568642906654772}

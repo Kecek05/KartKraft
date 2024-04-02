@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &456859490897217637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3489705737682025595}
+  m_Layer: 2
+  m_Name: PointInstancePowersUp
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3489705737682025595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456859490897217637}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.569, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2827529776149665475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021503154168699279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4861,6 +4892,7 @@ Transform:
   m_Children:
   - {fileID: 6326865117994953787}
   - {fileID: 1874142102829820568}
+  - {fileID: 3489705737682025595}
   m_Father: {fileID: 8337212023627539131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3226069850608547668
@@ -6117,7 +6149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: 371ac0fb-a4e8-4d65-9098-d992d55724bd
+  m_Id: 2a3cffd2-638b-4b6d-883d-59a2a8ba2f38
 --- !u!114 &7848857973771131861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6134,11 +6166,13 @@ MonoBehaviour:
   Points:
   - {fileID: 513662929940821540}
   - {fileID: 7604186047277669212}
+  - {fileID: 3489705737682025595}
   rb: {fileID: 8337212023627539130}
   transBouncing: {fileID: 8337212023751522606}
   kartScript: {fileID: 8337212023627539129}
   particleSpeed: {fileID: 1021503154168699279}
   stunRotationSpeed: 550
+  capaceteObj: {fileID: 0}
   Item: {fileID: 0}
   pecasCarro:
   - {fileID: 2478121979741063996}
