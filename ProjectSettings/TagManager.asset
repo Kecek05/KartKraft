@@ -11,6 +11,7 @@ TagManager:
   - Teia
   - CheckPoint
   - FinishLine
+  - Capacete
   layers:
   - Default
   - TransparentFX

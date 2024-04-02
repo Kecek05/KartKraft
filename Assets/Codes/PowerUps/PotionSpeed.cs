@@ -5,14 +5,4 @@ using UnityEngine;
 public class PotionSpeed : MonoBehaviour
 {
    
-    void Start()
-    {
-        
-    }
-
-   
-    void Update()
-    {
-        
-    }
 }

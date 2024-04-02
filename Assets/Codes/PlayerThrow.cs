@@ -16,6 +16,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     [SerializeField] private float stunRotationSpeed;
 
     public GameObject Item;
+    private bool haveCapacete;
 
     [SerializeField] private Transform[] pecasCarro;
     private bool isRotating;
@@ -79,6 +80,9 @@ public class PlayerThrow : MonoBehaviour, ITouchable
                 } else if(Item.gameObject.tag == "Teia")
                 {
                     Instantiate(Item, Points[1].position, Points[1].rotation);
+                } else if (Item.CompareTag("Capacete"))
+                {
+                    takeCapacete();
                 }
                 else
                 {
@@ -156,4 +160,13 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             isRotating = false;
         }
     }
+
+    public void takeCapacete()
+    {
+        haveCapacete = true;
+        GameObject capa = Instantiate(Item, Points[2].position, Points[2].rotation);
+        CapaceteScript capaScript = capa.transform.GetComponent<CapaceteScript>();
+        capaScript.FollowPlayer(this.gameObject);
+    }
+
 }
