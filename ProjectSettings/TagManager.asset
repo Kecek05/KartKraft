@@ -9,6 +9,8 @@ TagManager:
   - MiniZombie
   - CrashMode
   - Teia
+  - CheckPoint
+  - FinishLine
   layers:
   - Default
   - TransparentFX
@@ -27,7 +29,7 @@ TagManager:
   - TrainingCheckpoints
   - Camera1
   - Camera2
-  - 
+  - CheckPointLayer
   - 
   - 
   - 

@@ -11,3 +11,8 @@ public interface ITouchable
 {
     void touch(int type);
 }
+
+public interface ICheckpointable
+{
+    void check(int index);
+}
