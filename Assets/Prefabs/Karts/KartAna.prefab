@@ -6018,10 +6018,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7034366422766259591}
-    - targetCorrespondingSourceObject: {fileID: 4895846115232909980, guid: cba6236a3ca88a54081cc989c4f0c08a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1726635284538332116}
     - targetCorrespondingSourceObject: {fileID: 4895846115356922113, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
       insertIndex: -1
@@ -6084,7 +6080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: c801a980-16c9-4cd7-a225-eb817bc63d7f
+  m_Id: 00e45351-596c-41a8-b0c2-49dded101f02
 --- !u!114 &8382584015098321529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6110,7 +6106,6 @@ MonoBehaviour:
   capaceteObj: {fileID: 0}
   offCapa: {x: 0, y: 1.5, z: -0.1}
   Item: {fileID: 0}
-  atirando: 0
   pecasCarro:
   - {fileID: 8378568642906654772}
   - {fileID: 3896388706963532637}
@@ -6131,37 +6126,6 @@ MonoBehaviour:
   checkedPoints: 000000000000
   canNextLap: 0
   allChecked: 0
---- !u!114 &1726635284538332116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8378568644290881387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 33c327e52c47d0244bba101c8184b35a,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Gameplay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!4 &8378568644290881388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,

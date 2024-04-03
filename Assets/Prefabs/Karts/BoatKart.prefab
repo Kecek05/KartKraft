@@ -6177,14 +6177,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2940676716624116013}
-    - targetCorrespondingSourceObject: {fileID: 4895846115232909980, guid: cba6236a3ca88a54081cc989c4f0c08a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5513655847658579089}
-    - targetCorrespondingSourceObject: {fileID: 4895846115232909980, guid: cba6236a3ca88a54081cc989c4f0c08a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2242696427832206862}
     - targetCorrespondingSourceObject: {fileID: 4895846115356922113, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
       insertIndex: -1
@@ -6247,7 +6239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: b2add9c2-2281-48f6-9453-b892a7664ce5
+  m_Id: 86fc3a41-25c5-4998-bf63-bdfb36e70766
 --- !u!114 &-8749839501692032949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6273,7 +6265,6 @@ MonoBehaviour:
   capaceteObj: {fileID: 0}
   offCapa: {x: 0, y: 1.4, z: 0}
   Item: {fileID: 0}
-  atirando: 0
   pecasCarro:
   - {fileID: 8811069872648818161}
   - {fileID: 2686829311650458596}
@@ -6294,119 +6285,6 @@ MonoBehaviour:
   checkedPoints: 000000000000
   canNextLap: 0
   allChecked: 0
---- !u!114 &5513655847658579089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2686829313085064379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 33c327e52c47d0244bba101c8184b35a,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2242696427832206862}
-        m_TargetAssemblyTypeName: KartInput, Assembly-CSharp
-        m_MethodName: OnAccelerate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 25aa226b-d312-46e0-88ee-b297da593985
-    m_ActionName: Gameplay/Accelerate[/XInputControllerWindows/leftStick/up,/XInputControllerWindows1/leftStick/up]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2242696427832206862}
-        m_TargetAssemblyTypeName: KartInput, Assembly-CSharp
-        m_MethodName: OnBreak
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 830d8518-247d-410f-836e-18e17c9870e9
-    m_ActionName: Gameplay/Brake[/XInputControllerWindows/buttonWest,/XInputControllerWindows1/buttonWest,/XInputControllerWindows/leftStick/down,/XInputControllerWindows1/leftStick/down]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2242696427832206862}
-        m_TargetAssemblyTypeName: KartInput, Assembly-CSharp
-        m_MethodName: OnTurn
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: fb99fd9a-489f-49da-8ffa-ed8e006a09de
-    m_ActionName: Gameplay/Turn[/XInputControllerWindows/leftStick,/XInputControllerWindows1/leftStick]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2242696427832206862}
-        m_TargetAssemblyTypeName: KartInput, Assembly-CSharp
-        m_MethodName: OnFire
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 9062285c-c0b2-4dea-a609-24f30d267109
-    m_ActionName: Gameplay/Fire[/XInputControllerWindows/buttonEast,/XInputControllerWindows1/buttonEast]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Gameplay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &2242696427832206862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2686829313085064379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08222b1dfcf14b8409270993c824b488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScript: {fileID: -8749839501692032949}
-  kartScript: {fileID: 2686829313085064382}
-  accelerateBool: 0
-  brakeBool: 0
-  firingBool: 0
-  turnFloat: {x: 0, y: 0}
 --- !u!4 &2686829313085064380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,

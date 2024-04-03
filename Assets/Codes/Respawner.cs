@@ -13,7 +13,6 @@ public class Respawner : MonoBehaviour
     public CinemachineVirtualCamera[] virtualCameras;
     public Image[] imagensUI;
 
-    [SerializeField] private testeInput[] InputScript;
 
     //Camera olhar para o objeto certo
     public GameObject[] cameraLook;
@@ -27,8 +26,6 @@ public class Respawner : MonoBehaviour
 
             //scripts
             PlayerThrow throwScript = car.transform.GetComponent<PlayerThrow>();
-            InputScript[i].player = car;
-            InputScript[i].StartInputs();
             if(i == 0)
             {
                 throwScript.isP1 = 0;
