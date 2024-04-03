@@ -10,6 +10,9 @@ public class testeInput : MonoBehaviour
     [SerializeField] private ArcadeKart kartScript;
     PlayerInput controls;
 
+
+    public GameObject player;
+
     public bool accelerateBool;
     public bool brakeBool;
     public bool firingBool;
@@ -19,6 +22,19 @@ public class testeInput : MonoBehaviour
     private void Awake()
     {
         controls = new PlayerInput();
+    }
+
+    public void StartInputs()
+    {
+       
+    }
+
+    //public void OnTurn(InputAction.CallbackContext ctx) => turnFloat = ctx.ReadValue<Vector2>();
+
+    private void Start()
+    {
+        playerScript = player.GetComponent<PlayerThrow>();
+        kartScript = player.GetComponent<ArcadeKart>();
 
         controls.Gameplay.Turn.performed += ctx => turnFloat = ctx.ReadValue<Vector2>();
         controls.Gameplay.Turn.canceled += ctx => turnFloat = Vector2.zero;

@@ -5073,7 +5073,7 @@ PrefabInstance:
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
       propertyPath: baseStats.Steer
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
@@ -5443,6 +5443,7 @@ MonoBehaviour:
   capaceteObj: {fileID: 0}
   offCapa: {x: 0, y: 1.2, z: -0.2}
   Item: {fileID: 0}
+  atirando: 0
   pecasCarro:
   - {fileID: 6670785550100294743}
   - {fileID: 7308435845467105555}
