@@ -5176,6 +5176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8179933451620151255, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
+      propertyPath: baseStats.Steer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8179933451620151255, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
       propertyPath: baseStats.TopSpeed
       value: 15
       objectReference: {fileID: 0}
