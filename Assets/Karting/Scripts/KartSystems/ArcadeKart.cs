@@ -184,6 +184,7 @@ namespace KartGame.KartSystems
         public void AddPowerup(StatPowerup statPowerup) => m_ActivePowerupList.Add(statPowerup);
         public void SetCanMove(bool move) => m_CanMove = move;
         public float GetMaxSpeed() => Mathf.Max(m_FinalStats.TopSpeed, m_FinalStats.ReverseSpeed);
+        
 
         private void ActivateDriftVFX(bool active)
         {
@@ -262,6 +263,9 @@ namespace KartGame.KartSystems
                     Instantiate(NozzleVFX, nozzle, false);
                 }
             }
+
+
+
         }
 
         void AddTrailToWheel(WheelCollider wheel)
@@ -412,11 +416,10 @@ namespace KartGame.KartSystems
                     m_LastCollisionNormal = contact.normal;
             }
         }
-
         void MoveVehicle(bool accelerate, bool brake, float turnInput)
         {
             float accelInput = (accelerate ? 1.0f : 0.0f) - (brake ? 1.0f : 0.0f);
-
+            //print(turnInput + " TURN");
             // manual acceleration curve coefficient scalar
             float accelerationCurveCoeff = 5;
             Vector3 localVel = transform.InverseTransformVector(Rigidbody.velocity);

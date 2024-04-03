@@ -13,6 +13,7 @@ public class Respawner : MonoBehaviour
     public CinemachineVirtualCamera[] virtualCameras;
     public Image[] imagensUI;
 
+
     //Camera olhar para o objeto certo
     public GameObject[] cameraLook;
     void Start()

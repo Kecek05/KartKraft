@@ -22,6 +22,8 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     public GameObject Item;
     private bool haveCapacete;
 
+    public bool atirando;
+
     [SerializeField] private Transform[] pecasCarro;
     private bool isRotating;
 
@@ -72,7 +74,10 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     {
         if(isP1 == 0)
         {
-
+            if(atirando)
+            {
+                shootPressed();
+            }
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 shootPressed();

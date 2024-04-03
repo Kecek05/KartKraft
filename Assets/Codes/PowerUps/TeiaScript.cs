@@ -7,11 +7,15 @@ public class TeiaScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameObject obj = other.transform.parent.gameObject;
-        ITouchable touchable = obj.gameObject.GetComponent<ITouchable>();
-        if (touchable != null && obj.gameObject.tag == "Player")
+        if(obj != null)
         {
-            touchable.touch(3);
-            Destroy(this.gameObject);
+            ITouchable touchable = obj.gameObject.GetComponent<ITouchable>();
+            if (touchable != null && obj.gameObject.tag == "Player")
+            {
+                touchable.touch(3);
+                Destroy(this.gameObject);
+            }
+
         }
     }
 
