@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 using static UnityEngine.InputSystem.InputAction;
 
 public class KartInput : MonoBehaviour
@@ -22,10 +23,11 @@ public class KartInput : MonoBehaviour
     public Vector2 turnFloat;
 
     private PlayerInput playerInputScript;
-
+    public static ReadOnlyArray<PlayerInput> all { get; }
     private void Awake()
     {
         playerInputScript = GetComponent<PlayerInput>();
+        int index = playerInputScript.All<>.Count;
         
     }
 
