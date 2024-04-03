@@ -10,6 +10,8 @@ public class UIPowerUp : MonoBehaviour
     public Sprite[] itensSprite;
     public Image[] imagensUI;
 
+    public Image[] lapsUI;
+
     private void Awake()
     {
         main = this;
@@ -39,8 +41,13 @@ public class UIPowerUp : MonoBehaviour
         } else if (item.gameObject.tag == "Teia")
         {
             imagensUI[i].sprite = itensSprite[3];
+        } else if (item.gameObject.tag == "Capacete")
+        {
+            imagensUI[i].sprite = itensSprite[4];
         }
 
 
     }
+
+ 
 }

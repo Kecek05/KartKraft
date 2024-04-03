@@ -5049,6 +5049,11 @@ PrefabInstance:
       propertyPath: m_Id
       value: a733bf48-01ad-461e-b170-265b42f91afd
       objectReference: {fileID: 0}
+    - target: {fileID: 1778369453945637289, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3310177827008995325, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: m_IsActive
@@ -5587,6 +5592,7 @@ PrefabInstance:
     - {fileID: 1342195566978272834, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 8525383435106009120, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 8179933453120910401, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
+    - {fileID: 1778369453945637289, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     m_RemovedGameObjects:
     - {fileID: 346156761350235758, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 8424755533331784800, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
@@ -5670,6 +5676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988cb45d838269949ad0adef157202e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScript: {fileID: 1039471502323941861}
   checkedPoints: 000000000000
   canNextLap: 0
   allChecked: 0

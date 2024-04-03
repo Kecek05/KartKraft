@@ -6122,6 +6122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988cb45d838269949ad0adef157202e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScript: {fileID: 8382584015098321529}
   checkedPoints: 000000000000
   canNextLap: 0
   allChecked: 0
