@@ -27,6 +27,8 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     [SerializeField] private Transform[] pecasCarro;
     private bool isRotating;
 
+
+
     public void touch(int type) // coisas que tocao
     {
        if (type == 0) // luckybox
@@ -99,6 +101,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
             {
                 if (Item.gameObject.tag == "PocaoSpeed")
                 {
+                    StopCoroutine(PotionSpeedTaken());
                     StartCoroutine(PotionSpeedTaken());
                 } else if(Item.gameObject.tag == "Teia")
                 {
