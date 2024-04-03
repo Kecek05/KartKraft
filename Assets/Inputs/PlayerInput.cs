@@ -132,7 +132,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Gameplay_Turn = m_Gameplay.FindAction("Turn", throwIfNotFound: true);
         m_Gameplay_Fire = m_Gameplay.FindAction("Fire", throwIfNotFound: true);
     }
-
+    [NonSerialized] private int m_PlayerIndex = -1;
+    public int playerIndex => m_PlayerIndex;
     public void Dispose()
     {
         UnityEngine.Object.Destroy(asset);

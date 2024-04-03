@@ -20,4 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Karting/Scenes/WinSceneP1.unity
     guid: d6801f2e59f75ee4b919cf5da4e48e3b
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: c9178a080c972c0418ac669e58635de8,
+      type: 2}
