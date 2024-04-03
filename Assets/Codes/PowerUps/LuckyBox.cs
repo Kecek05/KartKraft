@@ -24,15 +24,10 @@ public class LuckyBox : MonoBehaviour
             if (touchable != null)
             {
                 touchable.touch(0);
+                ReactiveLuckyBlock.main.startDeactive(this.gameObject);
                 gameObject.SetActive(false);
             }
         }
-    }
-
-    private void OnDisable()
-    {
-        //StartCoroutine(SkillsManager.main.reactive(this.gameObject));
-        ReactiveLuckyBlock.main.startDeactive(this.gameObject);
     }
 
 

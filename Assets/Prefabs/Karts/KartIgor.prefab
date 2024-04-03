@@ -5441,7 +5441,7 @@ MonoBehaviour:
   particleSpeed: {fileID: 3026447833626901681}
   stunRotationSpeed: 550
   capaceteObj: {fileID: 0}
-  offCapa: {x: -0.1, y: 1.2, z: -0.2}
+  offCapa: {x: 0, y: 1.2, z: -0.2}
   Item: {fileID: 0}
   pecasCarro:
   - {fileID: 6670785550100294743}

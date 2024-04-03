@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LapsManager : MonoBehaviour
 {
@@ -66,6 +67,12 @@ public class LapsManager : MonoBehaviour
 
     private void FinishGame()
     {
-        print("VIROTIAAAAAAAAAA");
+        if(lapsP1 >= 3)
+        {
+            SceneManager.LoadSceneAsync("WinSceneP1");
+        } else if (lapsP2 >= 3)
+        {
+            SceneManager.LoadSceneAsync("WinSceneP2");
+        }
     }
 }
