@@ -1240,6 +1240,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.0012341146
       objectReference: {fileID: 0}
+    - target: {fileID: 7034366422766259591, guid: 8a6866287a96aec49ba6428ae010f0e3,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8378568644290881386, guid: 8a6866287a96aec49ba6428ae010f0e3,
         type: 3}
       propertyPath: m_Enabled
@@ -1342,6 +1347,7 @@ PrefabInstance:
     - {fileID: 8378568644290881393, guid: 8a6866287a96aec49ba6428ae010f0e3, type: 3}
     - {fileID: 8378568644290881391, guid: 8a6866287a96aec49ba6428ae010f0e3, type: 3}
     - {fileID: 8382584015098321529, guid: 8a6866287a96aec49ba6428ae010f0e3, type: 3}
+    - {fileID: 7034366422766259591, guid: 8a6866287a96aec49ba6428ae010f0e3, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3683452330966583013, guid: 8a6866287a96aec49ba6428ae010f0e3, type: 3}
     - {fileID: 8378568642906654773, guid: 8a6866287a96aec49ba6428ae010f0e3, type: 3}
@@ -3148,6 +3154,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2940676716624116013, guid: 98369923c8ecfb14cbf20602c4c276e7,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6478468376758828971, guid: 98369923c8ecfb14cbf20602c4c276e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3255,6 +3266,7 @@ PrefabInstance:
     - {fileID: 2686829313085064353, guid: 98369923c8ecfb14cbf20602c4c276e7, type: 3}
     - {fileID: 2686829313085064383, guid: 98369923c8ecfb14cbf20602c4c276e7, type: 3}
     - {fileID: -8749839501692032949, guid: 98369923c8ecfb14cbf20602c4c276e7, type: 3}
+    - {fileID: 2940676716624116013, guid: 98369923c8ecfb14cbf20602c4c276e7, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2735033084850967080, guid: 98369923c8ecfb14cbf20602c4c276e7, type: 3}
     - {fileID: 5180952193810515118, guid: 98369923c8ecfb14cbf20602c4c276e7, type: 3}
@@ -3360,6 +3372,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1614855757}
     m_Modifications:
+    - target: {fileID: -7620047994326929057, guid: 031afdad94db4e04795b8e539b9a7282,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 960945576348577260, guid: 031afdad94db4e04795b8e539b9a7282,
         type: 3}
       propertyPath: rb
@@ -3462,6 +3479,7 @@ PrefabInstance:
     - {fileID: 6670785549068649234, guid: 031afdad94db4e04795b8e539b9a7282, type: 3}
     - {fileID: 6670785549068649228, guid: 031afdad94db4e04795b8e539b9a7282, type: 3}
     - {fileID: 960945576348577260, guid: 031afdad94db4e04795b8e539b9a7282, type: 3}
+    - {fileID: -7620047994326929057, guid: 031afdad94db4e04795b8e539b9a7282, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2002839278588912262, guid: 031afdad94db4e04795b8e539b9a7282, type: 3}
     - {fileID: 6670785550100294742, guid: 031afdad94db4e04795b8e539b9a7282, type: 3}
@@ -3857,6 +3875,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6137091340979948424, guid: 4d92fd6e753f4f54190b247c939f4078,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4214037796906162598, guid: 4d92fd6e753f4f54190b247c939f4078, type: 3}
     - {fileID: 4214037796906162597, guid: 4d92fd6e753f4f54190b247c939f4078, type: 3}
@@ -3865,6 +3888,7 @@ PrefabInstance:
     - {fileID: 4214037796906162596, guid: 4d92fd6e753f4f54190b247c939f4078, type: 3}
     - {fileID: 0}
     - {fileID: 1039471502323941861, guid: 4d92fd6e753f4f54190b247c939f4078, type: 3}
+    - {fileID: 6137091340979948424, guid: 4d92fd6e753f4f54190b247c939f4078, type: 3}
     m_RemovedGameObjects:
     - {fileID: 9017229721059948590, guid: 4d92fd6e753f4f54190b247c939f4078, type: 3}
     - {fileID: 4214037798424671998, guid: 4d92fd6e753f4f54190b247c939f4078, type: 3}
@@ -5681,6 +5705,11 @@ PrefabInstance:
       propertyPath: kartScript
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5618453730425771528, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8179933451620151240, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: Kart
@@ -5773,6 +5802,7 @@ PrefabInstance:
     - {fileID: 8179933451620151240, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 8179933451620151254, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 4811689612319602179, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
+    - {fileID: 5618453730425771528, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3953053856678628956, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
     - {fileID: 8179933452484067468, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
@@ -7328,6 +7358,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1614855757}
     m_Modifications:
+    - target: {fileID: 2092326297998886581, guid: 6d3e5e665cab76e4f94af0326425a4a0,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7848857973771131861, guid: 6d3e5e665cab76e4f94af0326425a4a0,
         type: 3}
       propertyPath: rb
@@ -7410,6 +7445,7 @@ PrefabInstance:
     - {fileID: 8337212023627539110, guid: 6d3e5e665cab76e4f94af0326425a4a0, type: 3}
     - {fileID: 8337212023627539128, guid: 6d3e5e665cab76e4f94af0326425a4a0, type: 3}
     - {fileID: 7848857973771131861, guid: 6d3e5e665cab76e4f94af0326425a4a0, type: 3}
+    - {fileID: 2092326297998886581, guid: 6d3e5e665cab76e4f94af0326425a4a0, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3813244326488130354, guid: 6d3e5e665cab76e4f94af0326425a4a0, type: 3}
     - {fileID: 8337212024256581090, guid: 6d3e5e665cab76e4f94af0326425a4a0, type: 3}

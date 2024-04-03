@@ -1,8 +1,9 @@
 {
     "name": "Unity.Karting.Tutorials",
+    "rootNamespace": "",
     "references": [
-        "GUID:149cad238efed4f53ac932b1e9555356",
-        "GUID:dca86c3434c38674a865b8fad7a81c91"
+        "Unity.Play.Publisher.Editor",
+        "Unity.Tutorials.Core.Editor"
     ],
     "includePlatforms": [
         "Editor"
