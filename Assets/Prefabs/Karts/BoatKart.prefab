@@ -6177,6 +6177,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2940676716624116013}
+    - targetCorrespondingSourceObject: {fileID: 4895846115232909980, guid: cba6236a3ca88a54081cc989c4f0c08a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4231718841638150330}
     - targetCorrespondingSourceObject: {fileID: 4895846115356922113, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
       insertIndex: -1
@@ -6265,6 +6269,7 @@ MonoBehaviour:
   capaceteObj: {fileID: 0}
   offCapa: {x: 0, y: 1.4, z: 0}
   Item: {fileID: 0}
+  atirando: 0
   pecasCarro:
   - {fileID: 8811069872648818161}
   - {fileID: 2686829311650458596}
@@ -6285,6 +6290,24 @@ MonoBehaviour:
   checkedPoints: 000000000000
   canNextLap: 0
   allChecked: 0
+--- !u!114 &4231718841638150330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2686829313085064379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7219aa317997ac04ca944cf63bb6560f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: -8749839501692032949}
+  kartScript: {fileID: 2686829313085064382}
+  accelerateBool: 0
+  brakeBool: 0
+  firingBool: 0
+  turnFloat: {x: 0, y: 0}
 --- !u!4 &2686829313085064380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a,
