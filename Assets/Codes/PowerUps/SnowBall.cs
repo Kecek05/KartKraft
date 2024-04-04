@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SnowBall : MonoBehaviour
+public class SnowBall : MonoBehaviour, ITouchable
 {
     [SerializeField] private GameObject father;
     [SerializeField] private float speed;
@@ -22,30 +23,41 @@ public class SnowBall : MonoBehaviour
         if (collision.gameObject == father)
             return;
         ITouchable touchable = collision.gameObject.GetComponent<ITouchable>();
-        if (touchable != null && collision.gameObject.tag == "Player")
+        if (touchable != null)
         {
             touchable.touch(1);
             Destroy(this.gameObject);
         }
     }
 
+    public void touch(int type)
+    {
+        Destroy(this.gameObject);
+    }
 
 
     private void FindFather()
     {
-        GameObject[] playersTarget = GameObject.FindGameObjectsWithTag("Player");
-        if (playersTarget.Length > 0)
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+        // Verifica se há pelo menos dois jogadores
+        if (players.Length > 0)
         {
-            float shortestDistance = Vector3.Distance(transform.position, playersTarget[0].transform.position);
-            for (int i = 0; i < playersTarget.Length; i++)
+            // Cria uma lista para armazenar as distâncias dos jogadores
+            List<Tuple<GameObject, float>> distances = new List<Tuple<GameObject, float>>();
+
+            // Calcula a distância de cada jogador para o inimigo e adiciona ao lista
+            foreach (GameObject player in players)
             {
-                float distance = Vector3.Distance(transform.position, playersTarget[i].transform.position);
-                if (distance < shortestDistance)
-                {
-                    shortestDistance = distance;
-                    father = playersTarget[i];
-                }
+                float distance = Vector3.Distance(transform.position, player.transform.position);
+                distances.Add(new Tuple<GameObject, float>(player, distance));
             }
+
+            // Ordena a lista de acordo com as distâncias
+            distances.Sort((x, y) => x.Item2.CompareTo(y.Item2));
+
+
+            father = distances[0].Item1;
         }
     }
 }

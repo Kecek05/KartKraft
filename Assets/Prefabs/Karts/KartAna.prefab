@@ -6030,7 +6030,7 @@ PrefabInstance:
     - target: {fileID: 4895846115625279582, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
       propertyPath: m_Radius
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115666603492, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
@@ -6127,7 +6127,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 262144
@@ -6137,7 +6137,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.0655347, y: 0.8726034, z: 2.387528}
-  m_Center: {x: -0.016089082, y: 0.5668185, z: 0.22565812}
+  m_Center: {x: -0.016089082, y: 0.7, z: 0.22565812}
 --- !u!4 &8378568643341155577 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4895846115356922126, guid: cba6236a3ca88a54081cc989c4f0c08a,
@@ -6173,7 +6173,7 @@ MonoBehaviour:
   particleSpeed: {fileID: 3977962672335047644}
   stunRotationSpeed: 550
   capaceteObj: {fileID: 0}
-  offCapa: {x: 0, y: 1.5, z: -0.1}
+  offCapa: {x: 0, y: 1.2, z: -0.1}
   Item: {fileID: 0}
   atirando: 0
   pecasCarro:

@@ -4,13 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class MiniZombie : MonoBehaviour
+public class MiniZombie : MonoBehaviour, ITouchable
 {
     [SerializeField] private float rotationSpeed;
     [SerializeField]private GameObject father;
     [SerializeField] private GameObject target;
     [SerializeField] private float speed;
     [SerializeField] float dieTime;
+
+    public void touch(int type)
+    {
+        Destroy(this.gameObject);
+    }
 
     void Start()
     {
@@ -35,7 +40,7 @@ public class MiniZombie : MonoBehaviour
         if (collision.gameObject == father)
             return;
         ITouchable touchable = collision.gameObject.GetComponent<ITouchable>();
-        if (touchable != null && collision.gameObject.tag == "Player")
+        if (touchable != null)
         {
             touchable.touch(2);
             Destroy(this.gameObject);

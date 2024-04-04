@@ -127,7 +127,7 @@ MonoBehaviour:
   father: {fileID: 0}
   speed: 40
   rb: {fileID: 1799375287371502670}
-  dieTime: 3
+  dieTime: 4
 --- !u!54 &1799375287371502670
 Rigidbody:
   m_ObjectHideFlags: 0
