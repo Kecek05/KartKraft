@@ -5676,9 +5676,9 @@ MonoBehaviour:
   Item: {fileID: 0}
   atirando: 0
   pecasCarro:
+  - {fileID: 8361551098405897717}
   - {fileID: 8179933452484067469}
   - {fileID: 3520330887655606009}
-  - {fileID: 8361551098405897717}
   fireButton: 
 --- !u!114 &5618453730425771528
 MonoBehaviour:

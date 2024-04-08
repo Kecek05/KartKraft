@@ -5233,6 +5233,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8179933451620151252, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8179933451620151252, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 8192
+      objectReference: {fileID: 0}
     - target: {fileID: 8179933451620151253, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5292,6 +5302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: baseStats.TopSpeed
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8179933451620151255, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
+      propertyPath: GroundLayers.m_Bits
+      value: 24371
       objectReference: {fileID: 0}
     - target: {fileID: 8179933451620151255, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
