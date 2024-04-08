@@ -13,6 +13,8 @@ public class Respawner : MonoBehaviour
     public CinemachineVirtualCamera[] virtualCameras;
     public Image[] imagensUI;
 
+    [SerializeField] private string p1FireButton;
+    [SerializeField] private string p2FireButton;
 
     //Camera olhar para o objeto certo
     public GameObject[] cameraLook;
@@ -29,9 +31,11 @@ public class Respawner : MonoBehaviour
             if(i == 0)
             {
                 throwScript.isP1 = 0;
+                throwScript.fireButton = p1FireButton;
             } else
             {
                 throwScript.isP1 = 1;
+                throwScript.fireButton = p2FireButton;
             }
 
             //camera

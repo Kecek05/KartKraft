@@ -5787,6 +5787,7 @@ MonoBehaviour:
   - {fileID: 4214037798424671999}
   - {fileID: 8873508967079374987}
   - {fileID: 4608731914609423239}
+  fireButton: 
 --- !u!114 &6137091340979948424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5846,7 +5847,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4214037797852742205}
-  m_Material: {fileID: 13400000, guid: 53fe74d4588e68d43b6f01b7332a4d46, type: 2}
+  m_Material: {fileID: 13400000, guid: 7117366206ecd89468ad65524fe21975, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 8192

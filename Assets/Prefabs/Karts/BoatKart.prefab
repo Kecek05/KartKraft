@@ -5892,6 +5892,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a,
+        type: 3}
       propertyPath: DriftControl
       value: 16
       objectReference: {fileID: 0}
@@ -6281,7 +6286,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2686829312156802854}
-  m_Material: {fileID: 13400000, guid: 53fe74d4588e68d43b6f01b7332a4d46, type: 2}
+  m_Material: {fileID: 13400000, guid: 7117366206ecd89468ad65524fe21975, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 8192
@@ -6337,6 +6342,7 @@ MonoBehaviour:
   - {fileID: 8811069872648818161}
   - {fileID: 2686829311650458596}
   - {fileID: 8871160787067683870}
+  fireButton: 
 --- !u!114 &2940676716624116013
 MonoBehaviour:
   m_ObjectHideFlags: 0
