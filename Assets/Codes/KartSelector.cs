@@ -95,6 +95,7 @@ public class KartSelector : MonoBehaviour
         lblPlayer[1].SetActive(true);
         yield return new WaitForSeconds(0.5f);
         playerChossing += 1;
+        BlinkObj.SetActive(false);
         canSelect = true;
     }
 }
