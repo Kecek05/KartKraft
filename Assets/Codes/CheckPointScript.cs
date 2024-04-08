@@ -10,12 +10,16 @@ public class CheckPointScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject obj = other.transform.parent.gameObject;
-        ICheckpointable checkpointable = obj.gameObject.GetComponent<ICheckpointable>();
-        if (checkpointable != null && obj.gameObject.tag == "Player")
+        if(other.transform.parent.gameObject != null)
         {
-            checkpointable.check(indexCheckPoint);
+            GameObject obj = other.transform.parent.gameObject;
+            ICheckpointable checkpointable = obj.gameObject.GetComponent<ICheckpointable>();
+            if (checkpointable != null && obj.gameObject.tag == "Player")
+            {
+                checkpointable.check(indexCheckPoint);
             
+            }
+
         }
     }
 }
