@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InGameMenuManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class InGameMenuManager : MonoBehaviour
     //PlayerInputHandler m_PlayerInputsHandler;
     FramerateCounter m_FramerateCounter;
 
+    public string menuName;
     void Start()
     {
         //m_PlayerInputsHandler = FindObjectOfType<PlayerInputHandler>();
@@ -62,6 +64,10 @@ public class InGameMenuManager : MonoBehaviour
         }
     }
 
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene(menuName);
+    }
     public void ClosePauseMenu()
     {
         SetPauseMenuActivation(false);

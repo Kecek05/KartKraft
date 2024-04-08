@@ -17,9 +17,13 @@ public class MiniZombie : MonoBehaviour, ITouchable
         Destroy(this.gameObject);
     }
 
-    void Start()
+    private void Awake()
     {
         FindAlvo();
+    }
+    void Start()
+    {
+
         Destroy(this.gameObject, dieTime);
     }
 
