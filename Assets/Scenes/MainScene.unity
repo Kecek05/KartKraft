@@ -17535,6 +17535,8 @@ MonoBehaviour:
   imagensUI:
   - {fileID: 1804386678}
   - {fileID: 2116300857}
+  p1FireButton: Fire
+  p2FireButton: FireP2
   cameraLook: []
 --- !u!4 &461195539
 Transform:

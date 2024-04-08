@@ -27,7 +27,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     [SerializeField] private Transform[] pecasCarro;
     private bool isRotating;
 
-
+    public string fireButton;
 
     public void touch(int type) // coisas que tocao
     {
@@ -74,23 +74,26 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     void Update()
     {
-        if(isP1 == 0)
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    if(isP1 == 0)
+        //    {
+        //        shootPressed();
+        //    }
+        //} else if( Input.GetKeyDown(KeyCode.L))
+        //{
+        //    if(isP1 == 1)
+        //    {
+        //        shootPressed();
+        //    }
+        //}
+        if(Input.GetButton(fireButton))
         {
-            if(atirando)
-            {
-                shootPressed();
-            }
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                shootPressed();
-            }
-        } else
-        {
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                shootPressed();
-            }
+            shootPressed();
+            print(" ATIRA");
         }
+       
+        
     }
 
     private void shootPressed()
@@ -99,11 +102,11 @@ public class PlayerThrow : MonoBehaviour, ITouchable
         {
             if (Item != null)
             {
-                if (Item.gameObject.tag == "PocaoSpeed")
+                if (Item.CompareTag("PocaoSpeed"))
                 {
                     StopCoroutine(PotionSpeedTaken());
                     StartCoroutine(PotionSpeedTaken());
-                } else if(Item.gameObject.tag == "Teia")
+                } else if(Item.CompareTag("Teia"))
                 {
                     Instantiate(Item, Points[1].position, Points[1].rotation);
                 } else if (Item.CompareTag("Capacete"))
