@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6629797300637803691, guid: fb81591dbc95140488dc129da2a4787f, type: 3}
+  - {fileID: 637949407474519127, guid: b7adec9218e08aa448cbb7d30446b004, type: 3}
   - {fileID: 4874126678125670354, guid: fb81591dbc95140488dc129da2a4787f, type: 3}
   - {fileID: -6478536213147159724, guid: fb81591dbc95140488dc129da2a4787f, type: 3}
   m_StaticBatchInfo:
@@ -5227,7 +5227,7 @@ PrefabInstance:
     - target: {fileID: 8179933451620151250, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: m_Name
-      value: AnaCart
+      value: The Kart
       objectReference: {fileID: 0}
     - target: {fileID: 8179933451620151250, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
@@ -5478,7 +5478,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 081b801ade155654b827171870c40eeb, type: 2}
+      objectReference: {fileID: -876546973899608171, guid: 92635da2e7900144493a59248ec4817a,
+        type: 3}
     - target: {fileID: 8298748421966622790, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5688,25 +5689,25 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: f2caaffee0a0ec842b99fa0004233ba0,
+      objectReference: {fileID: -876546973899608171, guid: 92635da2e7900144493a59248ec4817a,
         type: 3}
     - target: {fileID: 8361551098408322835, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: f2caaffee0a0ec842b99fa0004233ba0,
+      objectReference: {fileID: -1315857036871075458, guid: aaaf134b2a1f781408dcb7a373720b63,
         type: 3}
     - target: {fileID: 8361551098408322837, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: 974853bf47d0d5e4db724f09dad59775,
+      objectReference: {fileID: -6478536213147159724, guid: 3659bb8be277133429070212a5594fe6,
         type: 3}
     - target: {fileID: 8361551098408322839, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: 974853bf47d0d5e4db724f09dad59775,
+      objectReference: {fileID: 4874126678125670354, guid: 589adde31f871ab499d9809ce3dbd5db,
         type: 3}
     - target: {fileID: 8361551098409289169, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
