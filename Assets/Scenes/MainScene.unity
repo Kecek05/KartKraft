@@ -13987,7 +13987,7 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: 53fe74d4588e68d43b6f01b7332a4d46, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 270336
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -13997,7 +13997,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
-  m_CookingOptions: 18
+  m_CookingOptions: -1
   m_Mesh: {fileID: -5779679934620876779, guid: 975bf4920e3dfd34e8c788b85e608b0b, type: 3}
 --- !u!4 &327647879 stripped
 Transform:
