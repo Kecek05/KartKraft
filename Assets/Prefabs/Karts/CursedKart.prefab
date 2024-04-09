@@ -5227,7 +5227,7 @@ PrefabInstance:
     - target: {fileID: 8179933451620151250, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: m_Name
-      value: The Kart
+      value: CursedKart
       objectReference: {fileID: 0}
     - target: {fileID: 8179933451620151250, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
@@ -5891,8 +5891,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.59314114, y: 1.3920951, z: 1.1121608}
-  m_Center: {x: -0.0329673, y: 1.3224258, z: 0.46324116}
+  m_Size: {x: 0.59314114, y: 1.7874665, z: 1.1121608}
+  m_Center: {x: -0.0329673, y: 1.5201116, z: 0.46324116}
 --- !u!4 &4214037798424671999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8179933452484067469, guid: 87bde4edc17b4e947a024fa323d470f2,

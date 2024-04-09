@@ -185,8 +185,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.37359047, y: 1.1181154, z: 0.38447094}
-  m_Center: {x: -0.008572578, y: 0.61094236, z: 0.009151459}
+  m_Size: {x: 0.37359047, y: 1.529355, z: 0.38447094}
+  m_Center: {x: -0.008572578, y: 0.8165622, z: 0.009151459}
 --- !u!114 &6303219545735294336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   rotationSpeed: 20
   father: {fileID: 0}
   target: {fileID: 0}
-  speed: 35
+  speed: 30
   dieTime: 20
 --- !u!54 &2584724007589310854
 Rigidbody:

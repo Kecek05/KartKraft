@@ -24,6 +24,8 @@ public class LapsManager : MonoBehaviour
         {
             FinishGame();
         }
+        updateLap(0);
+        updateLap(1);
     }
 
 
@@ -31,37 +33,29 @@ public class LapsManager : MonoBehaviour
     {
         if (i == 0) // player 1
         {
-            if(lapsP1 == 1)
+            if(lapsP1 == 1) // esta na 2
             {
                 lapsUIP1[0].gameObject.SetActive(false);
                 lapsUIP1[1].gameObject.SetActive(true);
-            } else if (lapsP1 == 2)
+            } else if (lapsP1 == 2) // estana 3
             {
                 lapsUIP1[1].gameObject.SetActive(false);
                 lapsUIP1[2].gameObject.SetActive(true);
-            } else if (lapsP1 == 3)
-            {
-                lapsUIP1[2].gameObject.SetActive(false);
-                lapsUIP1[3].gameObject.SetActive(true);
-            }
+            } 
 
         } else if(i == 1) // player 2
         {
-            if (lapsP2 == 1)
+            if (lapsP2 == 1) // esta na 2
             {
                 lapsUIP2[0].gameObject.SetActive(false);
                 lapsUIP2[1].gameObject.SetActive(true);
             }
-            else if (lapsP1 == 2)
+            else if (lapsP2 == 2) // esta na 3
             {
                 lapsUIP2[1].gameObject.SetActive(false);
                 lapsUIP2[2].gameObject.SetActive(true);
             }
-            else if (lapsP2 == 3)
-            {
-                lapsUIP2[2].gameObject.SetActive(false);
-                lapsUIP2[3].gameObject.SetActive(true);
-            }
+           
         }
     }
 

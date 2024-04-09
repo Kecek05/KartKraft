@@ -27,7 +27,7 @@ public class MiniZombie : MonoBehaviour, ITouchable
         Destroy(this.gameObject, dieTime);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
 
