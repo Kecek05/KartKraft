@@ -13,7 +13,6 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     [SerializeField] private Transform transBouncing;
     [SerializeField] private ArcadeKart kartScript;
     [SerializeField] private GameObject particleSpeed;
-    [SerializeField] private float stunRotationSpeed;
 
     [SerializeField] private GameObject capaceteObj;
 
@@ -24,11 +23,13 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     public bool atirando;
 
-    [SerializeField] private Transform[] pecasCarro;
     private bool isRotating;
 
     public string fireButton;
 
+    [SerializeField] private Animator anim;
+    [SerializeField] private GameObject WheelsObj;
+    [SerializeField] private GameObject WheelsVisual;
     public void touch(int type) // coisas que tocao
     {
        if (type == 0) // luckybox
@@ -44,8 +45,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
                 LoseCapacete();
                 return;
             }
-            StartCoroutine(StunTaken());
-            rotateStart(SkillsManager.main.SnowstunTime);
+            StartCoroutine(StunTaken(SkillsManager.main.SnowstunTime));
             
        } else if (type == 2) // MiniZombie
        {
@@ -54,8 +54,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
                 LoseCapacete();
                 return;
             }
-            StartCoroutine(MiniZombieStunTaken());
-            rotateStart(SkillsManager.main.MiniZombiestunTime);
+            StartCoroutine(StunTaken(SkillsManager.main.MiniZombiestunTime));
 
         } else if (type == 3) // teia
         {
@@ -64,8 +63,7 @@ public class PlayerThrow : MonoBehaviour, ITouchable
                 LoseCapacete();
                 return;
             }
-            StartCoroutine(TeiaStunTaken());
-            rotateStart(SkillsManager.main.teiaStunDuration);
+            StartCoroutine(StunTaken(SkillsManager.main.teiaStunDuration));
  
         }
 
@@ -74,19 +72,6 @@ public class PlayerThrow : MonoBehaviour, ITouchable
 
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    if(isP1 == 0)
-        //    {
-        //        shootPressed();
-        //    }
-        //} else if( Input.GetKeyDown(KeyCode.L))
-        //{
-        //    if(isP1 == 1)
-        //    {
-        //        shootPressed();
-        //    }
-        //}
         if(Input.GetButton(fireButton))
         {
             shootPressed();
@@ -123,6 +108,14 @@ public class PlayerThrow : MonoBehaviour, ITouchable
         }
     }
 
+    private IEnumerator StunTaken(float time)
+    {
+        rb.constraints = RigidbodyConstraints.FreezePosition;
+        rotateStart(time);
+        yield return new WaitForSeconds(time);
+        rb.constraints = RigidbodyConstraints.None;
+    }
+
     private IEnumerator PotionSpeedTaken() // Potion Speed
     {
         particleSpeed.SetActive(true);
@@ -134,25 +127,6 @@ public class PlayerThrow : MonoBehaviour, ITouchable
         particleSpeed.SetActive(false);
     }
 
-    private IEnumerator StunTaken() // Snowball
-    {
-        rb.constraints = RigidbodyConstraints.FreezePosition;
-        yield return new WaitForSeconds(SkillsManager.main.SnowstunTime);
-        rb.constraints = RigidbodyConstraints.None;
-    }
-    private IEnumerator MiniZombieStunTaken() // Snowball
-    {
-        rb.constraints = RigidbodyConstraints.FreezePosition;
-        yield return new WaitForSeconds(SkillsManager.main.MiniZombiestunTime);
-        rb.constraints = RigidbodyConstraints.None;
-    }
-
-    private IEnumerator TeiaStunTaken() // teia
-    {
-        rb.constraints = RigidbodyConstraints.FreezePosition;
-        yield return new WaitForSeconds(SkillsManager.main.teiaStunDuration);
-        rb.constraints = RigidbodyConstraints.None;
-    }
     private void rotateStart(float time)
     {
         if (!isRotating)
@@ -166,28 +140,19 @@ public class PlayerThrow : MonoBehaviour, ITouchable
     {
         float steerInit = kartScript.baseStats.Steer;
         kartScript.baseStats.Steer = 0f;
-        Quaternion positionInit = transform.rotation;
-        float elapsedTime = 0f;
+        //anim play
+        WheelsVisual.SetActive(true);
+        WheelsObj.SetActive(false);
+        anim.Play("rotate");
+        yield return new WaitForSeconds(time);
+        //anim stop
+        kartScript.baseStats.Steer = steerInit;
+        isRotating = false;
+        WheelsObj.SetActive(true);
+        WheelsVisual.SetActive(false);
+        anim.Play("idle");
 
-        while (elapsedTime < time)
-        {
-            foreach (Transform peca in pecasCarro)
-            {
-                peca.Rotate(Vector3.down, stunRotationSpeed * Time.deltaTime);
-            }
-            
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-        if(elapsedTime >= time)
-        {
-            foreach (Transform peca in pecasCarro)
-            {
-                peca.rotation = positionInit;
-            }
-            kartScript.baseStats.Steer = steerInit;
-            isRotating = false;
-        }
+
     }
 
     public void takeCapacete()

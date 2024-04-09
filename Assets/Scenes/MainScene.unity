@@ -89260,7 +89260,7 @@ MonoBehaviour:
   - {fileID: 2122216250970363506, guid: 5cda3b08076327d42b6d2bf359ec56d7, type: 3}
   - {fileID: 8317265356240215142, guid: 8066c2ba82ac14446842cf01f704ae8c, type: 3}
   SnowstunTime: 4
-  MiniZombiestunTime: 1.5
+  MiniZombiestunTime: 2
   potionSpeedDuration: 4
   potionSpeedAccAdd: 6
   potionSpeedTopSpeedAdd: 6
