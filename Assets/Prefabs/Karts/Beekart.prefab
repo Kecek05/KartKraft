@@ -5278,6 +5278,16 @@ PrefabInstance:
       propertyPath: startDelay.scalar
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 3953053856678628959, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
+      propertyPath: ReverseSoundMaxVolume
+      value: 0.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953053856678628959, guid: 87bde4edc17b4e947a024fa323d470f2,
+        type: 3}
+      propertyPath: RunningSoundMaxVolume
+      value: 0.483
+      objectReference: {fileID: 0}
     - target: {fileID: 4811689612319602179, guid: 87bde4edc17b4e947a024fa323d470f2,
         type: 3}
       propertyPath: PointFront
