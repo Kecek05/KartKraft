@@ -75,6 +75,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6da48fc8281623547b1c150f5f00f56f,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6da48fc8281623547b1c150f5f00f56f,
+        type: 3}
       propertyPath: m_TagString
       value: PocaoSpeed
       objectReference: {fileID: 0}

@@ -58,6 +58,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 90733b41c5511e945a34ec586e68646b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6309288710069335960, guid: 90733b41c5511e945a34ec586e68646b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3540272279435206582, guid: 90733b41c5511e945a34ec586e68646b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2711568015685091298, guid: 90733b41c5511e945a34ec586e68646b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 90733b41c5511e945a34ec586e68646b,
         type: 3}
       propertyPath: m_Name
@@ -65,8 +85,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 90733b41c5511e945a34ec586e68646b,
         type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 90733b41c5511e945a34ec586e68646b,
+        type: 3}
       propertyPath: m_TagString
       value: MiniZombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794696560605274189, guid: 90733b41c5511e945a34ec586e68646b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067333904889931614, guid: 90733b41c5511e945a34ec586e68646b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4269497774422051486, guid: 90733b41c5511e945a34ec586e68646b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: 90733b41c5511e945a34ec586e68646b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8417361359673230750, guid: 90733b41c5511e945a34ec586e68646b,
         type: 3}
