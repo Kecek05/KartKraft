@@ -157,7 +157,7 @@ MonoBehaviour:
   rotationSpeed: 20
   father: {fileID: 0}
   target: {fileID: 0}
-  speed: 40
+  speed: 35
   dieTime: 20
 --- !u!54 &2584724007589310854
 Rigidbody:

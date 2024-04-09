@@ -66,6 +66,7 @@ public class InGameMenuManager : MonoBehaviour
 
     public void GoToMenu()
     {
+        SetPauseMenuActivation(false);
         SceneManager.LoadScene(menuName);
     }
     public void ClosePauseMenu()
