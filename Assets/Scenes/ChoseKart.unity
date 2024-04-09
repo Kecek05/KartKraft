@@ -1893,7 +1893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &340200552
 Transform:
   m_ObjectHideFlags: 0
@@ -2710,7 +2710,6 @@ MonoBehaviour:
   - {fileID: 6670785549068649224, guid: 031afdad94db4e04795b8e539b9a7282, type: 3}
   - {fileID: 8179933451620151250, guid: 87bde4edc17b4e947a024fa323d470f2, type: 3}
   - {fileID: 8337212023627539132, guid: 6d3e5e665cab76e4f94af0326425a4a0, type: 3}
-  - {fileID: 4214037796906162592, guid: 01f8ac7a5fbcfd64794133812ff4c05c, type: 3}
   selectedCar: 0
   canSelect: 0
   currentCar: {fileID: 0}
@@ -6121,6 +6120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CursedKart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214037796906162592, guid: 01f8ac7a5fbcfd64794133812ff4c05c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4214037796906162593, guid: 01f8ac7a5fbcfd64794133812ff4c05c,
         type: 3}
